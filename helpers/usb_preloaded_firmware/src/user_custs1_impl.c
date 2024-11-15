@@ -93,11 +93,15 @@ void user_svc1_led_wr_ind_handler(ke_msg_id_t const msgid,
 
     if (val == CUSTS1_LED_ON)
     {
-        GPIO_SetActive(GPIO_LED_PORT, GPIO_LED_PIN);
+      #if ! defined (__DA14533__)
+			GPIO_SetActive(GPIO_LED_PORT, GPIO_LED_PIN);
+			#endif
     }
     else if (val == CUSTS1_LED_OFF)
     {
-        GPIO_SetInactive(GPIO_LED_PORT, GPIO_LED_PIN);
+      #if ! defined (__DA14533__)
+			GPIO_SetInactive(GPIO_LED_PORT, GPIO_LED_PIN);
+			#endif
     }
 }
 

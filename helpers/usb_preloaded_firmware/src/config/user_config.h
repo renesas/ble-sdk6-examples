@@ -208,8 +208,11 @@ static const struct advertise_configuration user_adv_conf = {
  ****************************************************************************************
  */
 /// Device name
+#if defined (__DA14531__) && (__DA14535__) && (__DA14533__)
+#define USER_DEVICE_NAME        "Renesas-PRPH"
+#else
 #define USER_DEVICE_NAME        "Renesas-USB-PRPH"
-
+#endif
 /// Device name length
 #define USER_DEVICE_NAME_LEN    (sizeof(USER_DEVICE_NAME)-1)
 

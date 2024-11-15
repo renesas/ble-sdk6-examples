@@ -4,7 +4,7 @@
 
 The main purpose of this software example is to provide the source files containing the firmware for the preloaded binary in the DA1453x USB kit.
 - Devices naming:
-    - DA1453x is referring to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1453x is referring to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
     - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
     - The DA14535 is a DA14531 upgrade.
 
@@ -14,7 +14,7 @@ The [UM-B-121 DA14531 getting Started with the USB Development Kit](https://lpcc
 
 This firmware example runs on DA1453x Bluetooth Smart SoC devices. 
 
-  - Connect the ***DA1453x USB Kit***  to the host computer via the USB connector. 
+  - Connect the ***DA1453x USB Kit***  or you DA1453x Developement kit to the host computer. 
  
   - Please find below the appropriate hardware configurations.
 
