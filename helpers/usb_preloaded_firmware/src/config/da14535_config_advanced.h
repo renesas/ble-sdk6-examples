@@ -116,7 +116,7 @@
 /* - CFG_NVDS_TAG_BLE_CA_NB_PKT         Number of packets to receive for statistics                             */
 /* - CFG_NVDS_TAG_BLE_CA_NB_BAD_PKT     Number  of bad packets needed to remove a channel                       */
 /****************************************************************************************************************/
-#define CFG_NVDS_TAG_BD_ADDRESS             {0x0B, 0x00, 0xF4, 0x35, 0x23, 0x48}
+#define CFG_NVDS_TAG_BD_ADDRESS             {0x6B, 0x60, 0x64, 0x65, 0x63, 0x68}
 
 #define CFG_NVDS_TAG_LPCLK_DRIFT            DRIFT_500PPM
 #define CFG_NVDS_TAG_BLE_CA_TIMER_DUR       2000

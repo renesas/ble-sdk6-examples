@@ -75,8 +75,9 @@ void GPIO_reservations(void)
 #if defined (CFG_PRINTF_UART2)
     RESERVE_GPIO(UART2_TX, UART2_TX_PORT, UART2_TX_PIN, PID_UART2_TX);
 #endif
-
+			#if ! defined (__DA14533__)
     RESERVE_GPIO(LED, GPIO_LED_PORT, GPIO_LED_PIN, PID_GPIO);
+	#endif
 
 #if !defined (__DA14586__)
     RESERVE_GPIO(SPI_EN, SPI_EN_PORT, SPI_EN_PIN, PID_SPI_EN);
@@ -104,8 +105,9 @@ void set_pad_functions(void)
     // Configure UART2 TX Pad
     GPIO_ConfigurePin(UART2_TX_PORT, UART2_TX_PIN, OUTPUT, PID_UART2_TX, false);
 #endif
-
+#if ! defined (__DA14533__)
     GPIO_ConfigurePin(GPIO_LED_PORT, GPIO_LED_PIN, OUTPUT, PID_GPIO, false);
+#endif
 }
 
 // Configuration struct for UART2
@@ -129,14 +131,18 @@ static void print_db_adress(void)
     {
         n = 0;
 //        timeout_expiration--;
-					printf_string(UART2, "#########################################################################################");
+					
+	printf_string(UART2, "#################################################################################################");
 					printf_string(UART2, "\n\r");
-					#if defined (__DA14531__) && (__DA14535__)
+					
+					#if defined (__DA14531__) && (__DA14535__) && (__DA14533__)
+					printf_string(UART2, " This is your Unique Static Random Address For your Device embed in the DA14533 Development KIT : \n\r");
+					#elif defined (__DA14531__) && (__DA14535__)
 					printf_string(UART2, " This is your Unique Static Random Address For your Device embed in the DA14535 USB KIT : \n\r");
 					#else
 					printf_string(UART2, " This is your Unique Static Random Address For your Device embed in the DA14531 USB KIT : \n\r");
 					#endif
-					printf_string(UART2, "#########################################################################################");
+					printf_string(UART2, "#################################################################################################");
 					   
 					printf_string(UART2, "\n\r");
 					printf_string(UART2, "\n\r");
@@ -163,13 +169,17 @@ static void systick_isr(void)
 {	 
     if (systick_var == 0)
     {
+			#if ! defined (__DA14533__)
         GPIO_SetActive(GPIO_LED_PORT, GPIO_LED_PIN);
+			#endif
         systick_var = 1;
 		  print_db_adress();
     }
     else
     {
+			#if ! defined (__DA14533__)
         GPIO_SetInactive(GPIO_LED_PORT, GPIO_LED_PIN);
+			#endif
         systick_var = 0;
 		  print_db_adress();
     }
