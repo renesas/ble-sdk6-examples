@@ -2,7 +2,7 @@
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration configurationName="DA14585" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017" moduleId="org.eclipse.cdt.core.settings" name="Debug_RAM_DA14585">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017" moduleId="org.eclipse.cdt.core.settings" name="DA14585">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -14,7 +14,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017" name="Debug_RAM_DA14585" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14585__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../../../../../../sdk/common_project_files/ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14585_586.lds&quot;">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017" name="DA14585" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14585__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../../../../../../sdk/common_project_files/ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14585_586.lds&quot;">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867017" name="DA14585" resourcePath="">
 						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id.1779445341" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id">
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.726446452" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.family.cortex-m0" valueType="enumerated"/>
@@ -41,9 +41,6 @@
 							<tool command="clang -c -Oz -flto -g -fomit-frame-pointer -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -include da1458x_config_basic.h -include da1458x_config_advanced.h -include user_config.h" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1139933023" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.1039381025" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
@@ -197,157 +194,6 @@
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.20788961" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.1204317852" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.1389784609" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true"/>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.735802280" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/lld&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/ea/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/em/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/atts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc/ancc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/basc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/bass/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom/custs/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/disc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/diss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/gatt/gatt_client/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpbh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpd/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogprh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lanc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lans/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/paspc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/pasps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxm/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxr/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/suota/suotar/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tipc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tips/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wssc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wsss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble_hl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/common_project_files&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/compiler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/ll&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/main&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/arch_console&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/common/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/crypto&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/dbg/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/h4tl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/nvds/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rf/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rwip/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/adc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/battery&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/dma&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/gpio&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/hw_otpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c_eeprom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/pdm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/reg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/rtc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_hci&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/syscntl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/systick&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/timer&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/trng&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/uart&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/wkupct_quadec&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
-								</option>
 							</tool>
 							<tool command="clang  -c  -Oz -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.819519728" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor.746113326" name="Use preprocessor (-x assembler-with-cpp)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor"/>
@@ -357,7 +203,10 @@
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.1922850313" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList.809053908" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList" valueType="stringList">
 									<listOptionValue builtIn="false" value="&quot;.\user_platform\user_periph_setup.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\user_app\user_proxr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_central_app.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_common.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gatt.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass_task.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\diss.o&quot;"/>
@@ -467,7 +316,6 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="sdk_profiles"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_app"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_config"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_custom_profile"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_platform"/>
 					</sourceEntries>
 				</configuration>
@@ -479,9 +327,6 @@
 				<option id="toolchain.enable" value="true"/>
 				<option id="toolchain.id" value="clang_arm"/>
 				<option id="toolchain.version" value="17.0.1"/>
-			</storageModule>
-			<storageModule moduleId="com.renesas.cdt.dialogsdk.storage">
-				<option id="deviceName" value="DA14585"/>
 			</storageModule>
 		</cconfiguration>
 		<cconfiguration configurationName="DA14586" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867018">
@@ -529,9 +374,6 @@
 							<tool command="clang -c -Oz -flto -g -fomit-frame-pointer -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -include da1458x_config_basic.h -include da1458x_config_advanced.h -include user_config.h" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.126072116" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.1912350697" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
@@ -688,157 +530,6 @@
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1950284359" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.1361741460" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.796366627" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.codeSizeAgress" valueType="enumerated"/>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.476776203" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/lld&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/ea/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/em/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/atts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc/ancc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/basc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/bass/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom/custs/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/disc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/diss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/gatt/gatt_client/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpbh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpd/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogprh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lanc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lans/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/paspc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/pasps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxm/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxr/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/suota/suotar/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tipc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tips/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wssc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wsss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble_hl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/common_project_files&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/compiler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/ll&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/main&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/arch_console&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/common/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/crypto&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/dbg/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/h4tl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/nvds/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rf/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rwip/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/adc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/battery&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/dma&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/gpio&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/hw_otpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c_eeprom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/pdm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/reg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/rtc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_hci&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/syscntl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/systick&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/timer&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/trng&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/uart&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/wkupct_quadec&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
-								</option>
 							</tool>
 							<tool command="clang  -c -Oz -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1869846996" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines.1425160331" name="Define a symbol (-D)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines" valueType="definedSymbols">
@@ -851,7 +542,10 @@
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.1616933104" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList.1388728594" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList" valueType="stringList">
 									<listOptionValue builtIn="false" value="&quot;.\user_platform\user_periph_setup.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\user_app\user_proxr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_central_app.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_common.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gatt.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass_task.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\diss.o&quot;"/>
@@ -961,7 +655,6 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="sdk_profiles"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_app"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_config"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_custom_profile"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_platform"/>
 					</sourceEntries>
 				</configuration>
@@ -988,11 +681,11 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019" name="DA14531" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14531__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../../../../../../sdk/common_project_files/ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14531.lds&quot;">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019" name="DA14531" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14531__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14531.lds&quot;">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019" name="DA14531" resourcePath="">
 						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id.794473880" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id">
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.1415174946" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.family.cortex-m0plus" valueType="enumerated"/>
-							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.architecture.378949630" name="Architecture" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.architecture" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.arch.armv6-m" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.architecture.378949630" name="Architecture" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.architecture" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.arch.none" valueType="enumerated"/>
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.instructionset.1090514414" name="Instruction set" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.instructionset"/>
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.interwork.348009359" name="Thumb interwork" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.interwork"/>
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.879193782" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian"/>
@@ -1015,9 +708,6 @@
 							<tool command="clang -c -Oz -g -fomit-frame-pointer -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -include da1458x_config_basic.h -include da1458x_config_advanced.h -include user_config.h" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1904709147" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.1397973225" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
@@ -1158,10 +848,12 @@
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/irng&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_cs&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro.1295884788" name="Macro Defines (-D)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -1176,157 +868,6 @@
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.316404328" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.1495849896" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.1531664392" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true"/>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.880513467" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/lld&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/ea/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/em/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/atts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc/ancc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/basc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/bass/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom/custs/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/disc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/diss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/gatt/gatt_client/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpbh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpd/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogprh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lanc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lans/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/paspc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/pasps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxm/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxr/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/suota/suotar/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tipc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tips/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wssc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wsss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble_hl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/common_project_files&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/compiler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/ll&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/main&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/arch_console&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/common/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/crypto&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/dbg/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/h4tl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/nvds/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rf/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rwip/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/adc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/battery&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/dma&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/gpio&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/hw_otpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c_eeprom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/pdm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/reg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/rtc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_hci&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/syscntl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/systick&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/timer&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/trng&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/uart&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/wkupct_quadec&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
-								</option>
 							</tool>
 							<tool command="clang  -c -Oz -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1647545039" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines.411826445" name="Define a symbol (-D)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines" valueType="definedSymbols">
@@ -1338,7 +879,10 @@
 							<tool command="clang -v -Oz -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -lcrt0  -T ldscript_DA14531.lds" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.1000876564" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList.1113183865" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList" valueType="stringList">
 									<listOptionValue builtIn="false" value="&quot;.\user_platform\user_periph_setup.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\user_app\user_proxr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_central_app.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_common.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gatt.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass_task.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\diss.o&quot;"/>
@@ -1463,7 +1007,6 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="sdk_profiles"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_app"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_config"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_custom_profile"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_platform"/>
 					</sourceEntries>
 				</configuration>
@@ -1478,7 +1021,7 @@
 			</storageModule>
 		</cconfiguration>
 		<cconfiguration configurationName="DA14531" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129" moduleId="org.eclipse.cdt.core.settings" name="Debug_RAM_DA14535">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129" moduleId="org.eclipse.cdt.core.settings" name="DA14535">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -1490,7 +1033,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129" name="Debug_RAM_DA14535" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14535__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../../../../../../sdk/common_project_files/ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14535.lds&quot;">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129" name="DA14535" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="make generate_ldscripts PRE_BUILD_EXTRA_DEFS=&quot;-D__DA14535__&quot; CC=&quot;clang&quot; LDSCRIPT_INCLUDE_DIR=&quot;../../src/config ../../../../../../sdk/common_project_files&quot; LDSCRIPT_PATH=&quot;../../../../../../sdk/common_project_files/ldscripts&quot; LDSCRIPT_FILES=&quot;ldscript_DA14535.lds&quot;">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.269867019.1153542129." name="DA14531" resourcePath="">
 						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id.62865804" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.Id">
 							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.333924659" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.family.cortex-m0plus" valueType="enumerated"/>
@@ -1517,9 +1060,6 @@
 							<tool command="clang -c -Oz -g -fomit-frame-pointer -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -include da1458x_config_basic.h -include da1458x_config_advanced.h -include user_config.h" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.916696927" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.1170918744" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
@@ -1660,10 +1200,12 @@
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/irng&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_cs&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro.1440265634" name="Macro Defines (-D)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -1677,157 +1219,6 @@
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.2044688449" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.271459191" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
 								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.450468687" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true"/>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.1757828561" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/app_modules/api&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../sdk/platform/utilities/otp_cs"/>
-									<listOptionValue builtIn="false" value="../../../../../../third_party/irng"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/custom_profile&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include/CMSIS/5.9.0/CMSIS/Core/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/em&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/lld&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/controller/llm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/ea/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/em/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/hci/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/attm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/att/atts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gap/gapm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/gatt/gattm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/l2c/l2cm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/host/smp/smpm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anc/ancc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/anp/anps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/basc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bas/bass/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bcs/bcss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/blp/blps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/bms/bmss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cpp/cpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cscp/cscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/cts/ctss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/custom/custs/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/disc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/dis/diss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/find/findt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/gatt/gatt_client/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/glp/glps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpbh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogpd/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hogp/hogprh/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/hrp/hrps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/htp/htpt/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lanc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/lan/lans/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/paspc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/pasp/pasps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxm/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/prox/proxr/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscpc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/rscp/rscps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scppc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/scpp/scpps/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/suota/suotar/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tipc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/tip/tips/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udsc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/uds/udss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wssc/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/profiles/wss/wsss/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/ble_stack/rwble_hl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/common_project_files&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/ARM&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/boot/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/compiler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/ll&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/arch/main&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/arch_console&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/common/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/crypto&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/dbg/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/gtl/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/h4tl/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/ke/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/nvds/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rf/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/core_modules/rwip/api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/adc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/battery&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/dma&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/gpio&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/hw_otpc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/i2c_eeprom&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/pdm&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/reg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/rtc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/spi_hci&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/syscntl&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/systick&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/timer&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/trng&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/uart&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/driver/wkupct_quadec&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/system_library/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/hash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../third_party/rand&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../sdk/platform/utilities/otp_hdr&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../src/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/generate&quot;"/>
-								</option>
 							</tool>
 							<tool command="clang  -c -Oz -flto  -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti" commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.730943901" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines.849648116" name="Define a symbol (-D)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines" valueType="definedSymbols">
@@ -1840,7 +1231,10 @@
 							<tool command="clang -v -Oz -flto -mthumb --target=armv6m-none-eabi -mfloat-abi=soft  -march=armv6m -fno-exceptions -fno-rtti -lcrt0  -T ldscript_DA14535.lds " commandLinePattern="" id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.1755645561" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList.604781883" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList" valueType="stringList">
 									<listOptionValue builtIn="false" value="&quot;.\user_platform\user_periph_setup.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\user_app\user_proxr.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_central_app.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_common.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gap.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\user_app\user_ble_gatt.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\bass_task.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\sdk_profiles\diss.o&quot;"/>
@@ -1960,7 +1354,6 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="sdk_profiles"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_app"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_config"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_custom_profile"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="user_platform"/>
 					</sourceEntries>
 				</configuration>
@@ -1972,9 +1365,6 @@
 				<option id="toolchain.enable" value="true"/>
 				<option id="toolchain.id" value="clang_arm"/>
 				<option id="toolchain.version" value="17.0.1"/>
-			</storageModule>
-			<storageModule moduleId="com.renesas.cdt.dialogsdk.storage">
-				<option id="deviceName" value="DA14535"/>
 			</storageModule>
 		</cconfiguration>
 	</storageModule>

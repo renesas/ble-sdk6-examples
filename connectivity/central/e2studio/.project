@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>central</name>
+	<name>central_converted</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>com.renesas.cdt.dialogsdk.dialogsdkBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
@@ -27,7 +22,6 @@
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>com.renesas.cdt.dialogsdk.dialogsdkNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -94,16 +88,6 @@
 			<name>sdk_app/app_bond_db.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_bond_db/app_bond_db.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_app/app_customs.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_app/app_customs_task.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_app/app_default_handlers.c</name>
@@ -426,11 +410,6 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/syscntl/syscntl.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_driver/timer0.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/driver/timer/timer0.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_driver/trng.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/trng/trng.c</locationURI>
@@ -446,11 +425,6 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/wkupct_quadec/wkupct_quadec.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_profiles/attm_db_128.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/host/att/attm/attm_db_128.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_profiles/bass.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass.c</locationURI>
@@ -459,21 +433,6 @@
 			<name>sdk_profiles/bass_task.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass_task.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custom_common.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custom_common.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custs1.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custs1_task.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_profiles/diss.c</name>
@@ -516,6 +475,16 @@
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/suota/suotar/src/suotar_task.c</locationURI>
 		</link>
 		<link>
+			<name>user_app/user_central_app.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/user_central_app.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/user_ble_common.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/user_ble_common.h</locationURI>
+		</link>
+		<link>
 			<name>user_app/user_ble_gap.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/src/user_ble_gap.c</locationURI>
@@ -524,11 +493,6 @@
 			<name>user_app/user_ble_gatt.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/src/user_ble_gatt.c</locationURI>
-		</link>
-		<link>
-			<name>user_app/user_central_app.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/user_central_app.c</locationURI>
 		</link>
 		<link>
 			<name>user_config/da1458x_config_advanced.h</name>
@@ -566,19 +530,9 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/config/user_profiles_config.h</locationURI>
 		</link>
 		<link>
-			<name>user_custom_profile/user_custs1_def.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/custom_profile/user_custs1_def.c</locationURI>
-		</link>
-		<link>
-			<name>user_custom_profile/user_custs_config.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/custom_profile/user_custs_config.c</locationURI>
-		</link>
-		<link>
 			<name>user_platform/user_periph_setup.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/platform/user_periph_setup.c</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/platform/user_periph_setup.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
