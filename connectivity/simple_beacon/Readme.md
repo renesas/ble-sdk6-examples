@@ -1,8 +1,16 @@
-# DA1453x and DA14585/586 Simple Beacon Example
+# DA1453x and DA1458x Simple Beacon Example
 
 ## Example description
 
 The main purpose of this Software Εxample is to demonstrate creating a ***Non-Connectable Advertising*** application example. To make Non-Connectable advertising more efficient the ``flag type`` field of an advertising packet is optional (please check ***Core Specification Supplement v6 by Bluetooth SIG***). If ``flag type`` is not used, it can free up to 3 bytes of space which can then be used for sending more advertising data.
+
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 
 ## What is a Beacon?
 
@@ -42,7 +50,7 @@ The available APIs  used are listed below :
 
  - ***app_easy_gap_non_connectable_advertise_start()*** : Start advertising for non-connectable peripheral.
 
-For getting more information about the Non-Connectable Advertising, please refer to [Advertising Tutorial](https://www.dialog-semiconductor.com/sites/default/files/advertising_concept.pdf) from our [support website](https://www.dialog-semiconductor.com/bluetooth-low-energy).
+For getting more information about the BLE Advertising, please refer to [Advertising Tutorial](https://lpccs-docs.renesas.com/DA145xx_Advertising_Tutorial/index.html). 
 
 ## Hardware & Software Configuration
 
@@ -62,25 +70,21 @@ The Example can also run on ***DA14585 Basic Development Kit*** with default jum
 
 ![585_basic_DK](assets/585_basic_DK.svg)
 
-Refer to the getting started guide of [DA14585 Basic Development Kit](http://lpccs-docs.dialog-semiconductor.com/DA14585_Getting_Started_basic/index.html).
-
 ### DA14531 Hardware Configuration
 
 In case of DA14531, the ***DA14531 Pro Development Kit*** is also required for this Software Example with default jumper configuration. Please see the illustrations below:
 
-Jumpers are placed in default configurations. Refer to the getting started guide of [DA14531 Pro Development Kit](https://www.dialog-semiconductor.com/da14531-getting-started).
+Jumpers are placed in default configurations. Refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html).
 
 ![531_pro_dk](assets/531_pro_dk.svg)
 
 ![535_pro_dk](assets/53x_pro_dk.svg)
 
 ## Software Configuration
-Download the latest version of Renesas SDK6.
-Install SEGGER’s J-Link tools.
+    - [SDK6 latest version](https://www.renesas.com/sdk6_latest)
+	- Install SEGGER’s J-Link tools.
+
 If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
-
-
-
 
 ## Using e² studio with LLVM
 Setup for e² studio
@@ -108,11 +112,15 @@ For detailed steps on using e² studio, refer to the Renesas e² studio User Gui
 
 ### Initial Setup
 
-For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/dialog-semiconductor/BLE_SDK6_examples).
+For the initial setup of the project that involves linking the SDK to this SW example, please follow this: https://github.com/renesas/ble-sdk6-examples/blob/main/Readme.md.
 
-- For the DA14585/586 getting started guide you can refer to this [link](http://lpccs-docs.dialog-semiconductor.com/da14585_getting_started/index.html).
+    - For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
 
-- For the DA14531 Getting started guide you can refer to this [link](https://www.dialog-semiconductor.com/da14531-getting-started).
+    - For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
+
+    - For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+
+    - For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
 ### Compile & Run
 

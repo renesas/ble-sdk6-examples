@@ -55,8 +55,8 @@
 #include "user_periph_setup.h"
 
 
-#define SCAN_INTVL_MS		(50)
-#define SCAN_WINDOW_MS	(50)
+#define SCAN_INTVL_MS        (50)
+#define SCAN_WINDOW_MS    (50)
 
 
 bool device_1 = false;
@@ -65,20 +65,19 @@ bool device_3 = false;
 
 typedef struct
 {
-	struct bd_addr addr;
+    struct bd_addr addr;
 }connecting_device_t;
 
 typedef struct
 {
-	periph_device_t 	periph_devices[CFG_MAX_CONNECTIONS];
-	
-	bool 							connect_to_periph;
-	struct bd_addr 		connect_to_addr;
-	uint8_t 					connect_to_addr_type;
-	uint8_t						num_connections;
-	timer_hnd					connection_timer;
-	
-}central_app_env_t;
+    periph_device_t     periph_devices[CFG_MAX_CONNECTIONS];
+    
+    bool            connect_to_periph;
+    struct bd_addr  connect_to_addr;
+    uint8_t         connect_to_addr_type;
+    uint8_t         num_connections;
+    timer_hnd       connection_timer;
+} central_app_env_t;
 
 central_app_env_t central_app_env;
 
@@ -91,50 +90,49 @@ central_app_env_t central_app_env;
 #if (SCAN_FILTER == (SCAN_FILTER_NAME) || SCAN_FILTER == SCAN_FILTER_NONE) 
 static inline void format_adv_string(uint8_t * data, uint8_t len, char *out_string)
 {
-	memcpy(out_string, data, len);
-	out_string[len] = '\0';
-	
+    memcpy(out_string, data, len);
+    out_string[len] = '\0';
 }
 #endif
 
 
 #if (SCAN_FILTER == SCAN_FILTER_NONE || SCAN_FILTER == SCAN_FILTER_16_BIT_SVC_DATA || SCAN_FILTER == SCAN_FILTER_MFG_DATA)
-
 /* return static buffer with formatted hex string */
-static char *format_hex_string(uint8_t *data, uint8_t len)	
+static char *format_hex_string(uint8_t *data, uint8_t len)    
 {
-	
-	static char buf[61];
-	uint8_t i;
-	for(i = 0; i < len; i++)
-	{
-		sprintf(&buf[i*2], "%02x", data[i]);
-	}
-	
-	buf[(i+1)*2+1] = '\0';
-	
-	return buf;
-	
+    
+    static char buf[61];
+    uint8_t i;
+    for(i = 0; i < len; i++)
+    {
+        sprintf(&buf[i*2], "%02x", data[i]);
+    }
+    
+    buf[(i+1)*2+1] = '\0';
+    
+    return buf;
+    
 }
 
 #endif
-	/* return static buffer with formatted address */
+
+/* return static buffer with formatted address */
 static const char *format_bd_address(const struct bd_addr *addr)
 {
-        static char buf[19];
-        int i;
+    static char buf[19];
+    int i;
 
-        for (i = 0; i < sizeof(addr->addr); i++) {
-                int idx;
+    for (i = 0; i < sizeof(addr->addr); i++) {
+            int idx;
 
-                // for printout, address should be reversed
-                idx = sizeof(addr->addr) - i - 1;
-                sprintf(&buf[i * 3], "%02x:", addr->addr[idx]);
-        }
+            // for printout, address should be reversed
+            idx = sizeof(addr->addr) - i - 1;
+            sprintf(&buf[i * 3], "%02x:", addr->addr[idx]);
+    }
 
-        buf[sizeof(buf) - 2] = '\0';
+    buf[sizeof(buf) - 2] = '\0';
 
-        return buf;
+    return buf;
 }
 
 
@@ -148,18 +146,17 @@ static const char *format_bd_address(const struct bd_addr *addr)
 static void handle_service_disc_finished(uint8_t con_idx)
 {
 #ifdef ENABLE_BAS
-	if(central_app_env.periph_devices[con_idx].serv_disc.bas_handle_valid){
-		user_gatt_read_simple(con_idx, 
-						central_app_env.periph_devices[con_idx].serv_disc.bas_char.c.value_handle);
-	}
-#endif 
+    if(central_app_env.periph_devices[con_idx].serv_disc.bas_handle_valid){
+        user_gatt_read_simple(con_idx, 
+                        central_app_env.periph_devices[con_idx].serv_disc.bas_char.c.value_handle);
+    }
+#endif
 
 #ifdef ENABLE_IAS
-	if(central_app_env.periph_devices[con_idx].serv_disc.ias_handle_valid){
-			configure_alert_button();
-	}
-#endif 
-	
+    if(central_app_env.periph_devices[con_idx].serv_disc.ias_handle_valid){
+            configure_alert_button();
+    }
+#endif
 }
 
 /**
@@ -170,10 +167,8 @@ static void handle_service_disc_finished(uint8_t con_idx)
  */
 static void ble_scan_for_devices()
 {
-	
-	ke_state_set(TASK_APP, APP_CONNECTABLE);
-	ble_gap_error_t err = user_ble_gap_start_scan(true, SCAN_INTVL_MS, SCAN_WINDOW_MS, false);
-	ASSERT_ERROR(err == BLE_GAP_ERROR_NO_ERROR);
+    ble_gap_error_t err = user_ble_gap_start_scan(true, SCAN_INTVL_MS, SCAN_WINDOW_MS, false);
+    ASSERT_ERROR(err == BLE_GAP_ERROR_NO_ERROR);
 }
 
 /**
@@ -185,124 +180,122 @@ static void ble_scan_for_devices()
  */
 void user_on_adv_report_ind(struct gapm_adv_report_ind const * adv_ind)
 {
-	bool dev_found = false;
-	
+    bool dev_found = false;
+    
 #if CONNECT_TO_PERIPHERAL == 1
-	bool conn_to_device = false;
-	struct bd_addr dev_addr = adv_ind->report.adv_addr;
+    bool conn_to_device = false;
+    struct bd_addr dev_addr = adv_ind->report.adv_addr;
 #endif 
 
-	uint8_t num_ad_elements = user_ble_gap_get_adv_num_elements(adv_ind->report.data, 
-																																		adv_ind->report.data_len);
-	ble_gap_adv_struct_t adv_data_structs[num_ad_elements]; 
-	
-	user_ble_gap_parse_adv_data(adv_ind->report.data_len, adv_ind->report.data, adv_data_structs);
-	
-	uint8_t i;
-	for(i = 0 ; i < num_ad_elements; i++)
-	{
-		
-		switch(adv_data_structs[i].type)
-		{
+    uint8_t num_ad_elements = user_ble_gap_get_adv_num_elements(adv_ind->report.data, adv_ind->report.data_len);
+    ble_gap_adv_struct_t adv_data_structs[num_ad_elements]; 
+
+    user_ble_gap_parse_adv_data(adv_ind->report.data_len, adv_ind->report.data, adv_data_structs);
+
+    uint8_t i;
+    for(i = 0 ; i < num_ad_elements; i++)
+    {
+        switch(adv_data_structs[i].type)
+        {
 #if SCAN_FILTER == SCAN_FILTER_NONE
-			case GAP_AD_TYPE_FLAGS:
-			{
-				dev_found = true;
-				dbg_block_printf("GAP FLAGS: %s\r\n", 
-													format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
-				break;
-			}
+            case GAP_AD_TYPE_FLAGS:
+            {
+                dev_found = true;
+                dbg_block_printf("GAP FLAGS: %s\r\n", 
+                                                    format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
+                break;
+            }
 #endif 
 #if (SCAN_FILTER == SCAN_FILTER_NONE) 
-			case GAP_AD_TYPE_MORE_16_BIT_UUID:
-			{
-				dev_found = true;
-				dbg_block_printf("INCOMP LIST 16-BIT SVC: %s\r\n", 
-													format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
-				break;
-			}
+            case GAP_AD_TYPE_MORE_16_BIT_UUID:
+            {
+                dev_found = true;
+                dbg_block_printf("INCOMP LIST 16-BIT SVC: %s\r\n", 
+                                                    format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
+                break;
+            }
 #endif
 #if (SCAN_FILTER == (SCAN_FILTER_NAME) || SCAN_FILTER == SCAN_FILTER_NONE) 
 
-			case GAP_AD_TYPE_COMPLETE_NAME:
-			{
-				dev_found = true;
-				
-				char local_name[adv_data_structs[i].len + 1];
-				format_adv_string(adv_data_structs[i].data,adv_data_structs[i].len, local_name);
-				dbg_block_printf("Device Local Name: %s\r\n", local_name);
-	#if CONNECT_TO_PERIPHERAL == 1
-				conn_to_device = memcmp(PERIPH_MATCH_DATA, adv_data_structs[i].data, PERIPH_MATCH_DATA_LEN) ? false : true;
-	#endif 
-				break;
-			}
+            case GAP_AD_TYPE_COMPLETE_NAME:
+            {
+                dev_found = true;
+                
+                char local_name[adv_data_structs[i].len + 1];
+                format_adv_string(adv_data_structs[i].data,adv_data_structs[i].len, local_name);
+                dbg_block_printf("Device Local Name: %s\r\n", local_name);
+    #if CONNECT_TO_PERIPHERAL == 1
+                conn_to_device = memcmp(PERIPH_MATCH_DATA, adv_data_structs[i].data, PERIPH_MATCH_DATA_LEN) ? false : true;
+    #endif 
+                break;
+            }
 #endif 
 #if SCAN_FILTER == SCAN_FILTER_NONE
-			
-			case GAP_AD_TYPE_TRANSMIT_POWER:
-			{
-				dev_found = true;
-				
-				int8_t power;
-				memcpy(&power, adv_data_structs[i].data, 1); 
-				dbg_block_printf("TX_POWER: %i dBm\r\n", power);
-													
-				break;
-			}
+            
+            case GAP_AD_TYPE_TRANSMIT_POWER:
+            {
+                dev_found = true;
+                
+                int8_t power;
+                memcpy(&power, adv_data_structs[i].data, 1); 
+                dbg_block_printf("TX_POWER: %i dBm\r\n", power);
+                                                    
+                break;
+            }
 #endif
 #if (SCAN_FILTER == SCAN_FILTER_16_BIT_SVC_DATA || SCAN_FILTER == SCAN_FILTER_NONE) 
-			case GAP_AD_TYPE_SERVICE_16_BIT_DATA:
-			{
-				dev_found = true;
-				
-				uint16_t UUID;
-				memcpy(&UUID, adv_data_structs[i].data, sizeof(uint16_t));
-				dbg_block_printf("GAP_TYPE: SVC_DATA_16_BIT: UUID:%04X DATA:%s\r\n", 
-														UUID, format_hex_string(adv_data_structs[i].data+2, adv_data_structs[i].len-2) );
-				break;
-			}
+            case GAP_AD_TYPE_SERVICE_16_BIT_DATA:
+            {
+                dev_found = true;
+                
+                uint16_t UUID;
+                memcpy(&UUID, adv_data_structs[i].data, sizeof(uint16_t));
+                dbg_block_printf("GAP_TYPE: SVC_DATA_16_BIT: UUID:%04X DATA:%s\r\n", 
+                                                        UUID, format_hex_string(adv_data_structs[i].data+2, adv_data_structs[i].len-2) );
+                break;
+            }
 #endif 
 #if (SCAN_FILTER == SCAN_FILTER_MFG_DATA || SCAN_FILTER == SCAN_FILTER_NONE) 
-			case GAP_AD_TYPE_MANU_SPECIFIC_DATA:
-			{
-				dev_found = true;
-				dbg_block_printf("MFG_SPECIFIC_DATA: %s\r\n", 
-													format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
-				break;
-			}
+            case GAP_AD_TYPE_MANU_SPECIFIC_DATA:
+            {
+                dev_found = true;
+                dbg_block_printf("MFG_SPECIFIC_DATA: %s\r\n", 
+                                                    format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
+                break;
+            }
 #endif 
-			default:
-			{
+            default:
+            {
 #if SCAN_FILTER == SCAN_FILTER_NONE
-				dev_found = true;
-				
-				dbg_block_printf("GAP Type: %02x, Data: %s\r\n", adv_data_structs[i].type, 
-												format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
+                dev_found = true;
+                
+                dbg_block_printf("GAP Type: %02x, Data: %s\r\n", adv_data_structs[i].type, 
+                                                format_hex_string(adv_data_structs[i].data, adv_data_structs[i].len) );
 #endif
-				break;
-			}
-			
-		}
-		
-	}
-	
-	if(dev_found){
-		uint8_t rssi_abs = 256 - adv_ind->report.rssi;
-		dbg_block_printf("RSSI: -%d\r\n", rssi_abs);
-		dbg_block_printf("BD_ADDR:%s \r\n---------------END_ADV-----------\r\n",format_bd_address(&adv_ind->report.adv_addr) );
-	}
+                break;
+            }
+            
+        }
+        
+    }
 
-	#if CONNECT_TO_PERIPHERAL
-	if(conn_to_device)
-	{
-		dbg_block_printf("Connecting to Device...\r\n", NULL);
-		central_app_env.connect_to_periph = true;
-		memcpy(&central_app_env.connect_to_addr, &dev_addr, sizeof(struct bd_addr));
-		central_app_env.connect_to_addr_type = adv_ind->report.adv_addr_type;
-		dbg_block_printf("\r\ndev_addr:%s \r\n",format_bd_address(&dev_addr) );
-		user_ble_gap_stop_scan(); 
-	}
-	#endif
+    if(dev_found){
+        uint8_t rssi_abs = 256 - adv_ind->report.rssi;
+        dbg_block_printf("RSSI: -%d\r\n", rssi_abs);
+        dbg_block_printf("BD_ADDR:%s \r\n---------------END_ADV-----------\r\n",format_bd_address(&adv_ind->report.adv_addr) );
+    }
+
+#if CONNECT_TO_PERIPHERAL
+    if(conn_to_device)
+    {
+        dbg_block_printf("Connecting to Device...\r\n", NULL);
+        central_app_env.connect_to_periph = true;
+        memcpy(&central_app_env.connect_to_addr, &dev_addr, sizeof(struct bd_addr));
+        central_app_env.connect_to_addr_type = adv_ind->report.adv_addr_type;
+        dbg_block_printf("\r\ndev_addr:%s \r\n",format_bd_address(&dev_addr) );
+        user_ble_gap_stop_scan(); 
+    }
+#endif
 }
 
 /**
@@ -314,7 +307,7 @@ void user_on_adv_report_ind(struct gapm_adv_report_ind const * adv_ind)
  ****************************************************************************************
  */
 void user_on_connection(uint8_t connection_idx, struct gapc_connection_req_ind const *param)
-{       
+{
     if (central_app_env.connection_timer != EASY_TIMER_INVALID_TIMER) {
         // Cancel the connection timer
         app_easy_timer_cancel(central_app_env.connection_timer);
@@ -325,12 +318,12 @@ void user_on_connection(uint8_t connection_idx, struct gapc_connection_req_ind c
     }
 
     default_app_on_connection(connection_idx, param);
-    
+
     central_app_env.periph_devices[connection_idx].addr = param->peer_addr;
     central_app_env.periph_devices[connection_idx].con_idx = connection_idx;
     central_app_env.periph_devices[connection_idx].con_valid = true;
     central_app_env.num_connections++;
-    
+
     // Print message when a connection is established
     dbg_printf("Connected to peripheral %d\r\n", central_app_env.num_connections);
 
@@ -339,18 +332,18 @@ void user_on_connection(uint8_t connection_idx, struct gapc_connection_req_ind c
         dbg_printf("Peripheral %d: %s\r\n", i + 1, format_bd_address(&central_app_env.periph_devices[i].addr));
     }
 
-    if (central_app_env.num_connections < (CFG_MAX_CONNECTIONS )) {
+    if (central_app_env.num_connections < CFG_MAX_CONNECTIONS) {
         ble_scan_for_devices();         
     }
-    
-    if (central_app_env.num_connections == (CFG_MAX_CONNECTIONS)) {
+
+    if (central_app_env.num_connections == CFG_MAX_CONNECTIONS) {
         // Print message when the maximum number of connections is reached
         dbg_printf("Maximum number of connections reached: %d\r\n", central_app_env.num_connections);
         
         // Start advertising
         app_easy_gap_undirected_advertise_start(); 
     }
-    
+
     user_gatt_discover_all_services(connection_idx, 1);
 }
 
@@ -364,32 +357,28 @@ void user_on_connection(uint8_t connection_idx, struct gapc_connection_req_ind c
  */
 void user_on_disconnect( struct gapc_disconnect_ind const *param )
 {
-	
-		dbg_printf("%s\r\n", __func__);
+    dbg_printf("%s\r\n", __func__);
     default_app_on_disconnect(param);
-		central_app_env.periph_devices[param->conhdl].con_valid = false;
-	
-		if(central_app_env.connection_timer != EASY_TIMER_INVALID_TIMER){
-			
-			app_easy_timer_cancel(central_app_env.connection_timer);
-			central_app_env.connection_timer = EASY_TIMER_INVALID_TIMER;
-			dbg_printf("user_on_disconnect timer check ...\r\n", NULL);	
-		}
-		
-		if (central_app_env.connect_to_periph )
-		{
-			app_easy_gap_undirected_advertise_start(); 
-		}
-		else{
-			ble_scan_for_devices();
-		}
-		
-		if (central_app_env.connect_to_periph && central_app_env.num_connections ==1 )
-		{
-			ble_scan_for_devices();
-		}
+    central_app_env.periph_devices[param->conhdl].con_valid = false;
 
-		dbg_printf("%s: reason:%02x\r\n", __func__, param->reason);
+    if(central_app_env.connection_timer != EASY_TIMER_INVALID_TIMER) {
+        app_easy_timer_cancel(central_app_env.connection_timer);
+        central_app_env.connection_timer = EASY_TIMER_INVALID_TIMER;
+        dbg_printf("user_on_disconnect timer check ...\r\n", NULL);    
+    }
+
+    if (central_app_env.connect_to_periph) {
+        app_easy_gap_undirected_advertise_start(); 
+    }
+    else {
+        ble_scan_for_devices();
+    }
+    
+    if (central_app_env.connect_to_periph && central_app_env.num_connections == 1) {
+        ble_scan_for_devices();
+    }
+
+    dbg_printf("%s: reason:%02x\r\n", __func__, param->reason);
 }
 
 /**
@@ -399,10 +388,10 @@ void user_on_disconnect( struct gapc_disconnect_ind const *param )
  ****************************************************************************************
  */
 static void connection_timeout_cb(){
-	
-	dbg_printf("connection_timeout_cb\r\n",NULL);
-	central_app_env.connection_timer = EASY_TIMER_INVALID_TIMER;
-	ble_scan_for_devices(); 
+    
+    dbg_printf("connection_timeout_cb\r\n",NULL);
+    central_app_env.connection_timer = EASY_TIMER_INVALID_TIMER;
+    ble_scan_for_devices(); 
 }
 
 /**
@@ -413,18 +402,14 @@ static void connection_timeout_cb(){
  ****************************************************************************************
  */
 void user_on_scanning_completed(uint8_t reason)
-{	
-	if(reason == GAP_ERR_CANCELED)
-	{
-		user_ble_gap_connect(central_app_env.connect_to_addr.addr, central_app_env.connect_to_addr_type);
-		central_app_env.connection_timer = app_easy_timer(CONNECTION_TIMEOUT_10MS, connection_timeout_cb);
-		
-	}
-	else{
-		
-		dbg_printf("%s: ERR: reason: %d\r\n", __func__, reason);
-	}
-	
+{
+    if(reason == GAP_ERR_CANCELED) {
+        user_ble_gap_connect(central_app_env.connect_to_addr.addr, central_app_env.connect_to_addr_type);
+        central_app_env.connection_timer = app_easy_timer(CONNECTION_TIMEOUT_10MS, connection_timeout_cb);
+    }
+    else{
+        dbg_printf("%s: ERR: reason: %d\r\n", __func__, reason);
+    }
 }
 
 /**
@@ -435,21 +420,20 @@ void user_on_scanning_completed(uint8_t reason)
  */
 void user_app_on_set_dev_config_complete(void)
 {
-		default_app_on_set_dev_config_complete();
-		ble_scan_for_devices();
+    default_app_on_set_dev_config_complete();
+    ble_scan_for_devices();
 }
 
 
 static void handle_svc_ind(uint8_t con_idx, struct gattc_sdp_svc_ind const *disc_svc)
 {
-	service_info_t *svc = ke_malloc(user_ble_get_svc_size(disc_svc), KE_MEM_NON_RETENTION);
+    service_info_t *svc = ke_malloc(user_ble_get_svc_size(disc_svc), KE_MEM_NON_RETENTION);
 
-	user_gatt_parse_service(disc_svc, svc, con_idx);
-		
-	ke_free(svc);
-	
-	central_app_env.periph_devices[con_idx].serv_disc.last_handle = disc_svc->end_hdl;
-	
+    user_gatt_parse_service(disc_svc, svc, con_idx);
+
+    ke_free(svc);
+
+    central_app_env.periph_devices[con_idx].serv_disc.last_handle = disc_svc->end_hdl;
 }
 
 /**
@@ -467,76 +451,67 @@ void user_catch_rest_hndl(ke_msg_id_t const msgid,
                           ke_task_id_t const dest_id,
                           ke_task_id_t const src_id)
 {
-	
-	
-	uint8_t conn_idx = KE_IDX_GET(src_id);
-	switch(msgid)
-	{
-		case GATTC_CMP_EVT:
-		{
-			
-			struct gattc_cmp_evt const* evt = (struct gattc_cmp_evt const *)(param);
-			switch(evt->operation)
-			{
-				case GATTC_SDP_DISC_SVC_ALL:
-				{
-					if(evt->status != CO_ERROR_NO_ERROR){
+    uint8_t conn_idx = KE_IDX_GET(src_id);
 
-							user_gatt_discover_all_services(conn_idx, central_app_env.periph_devices[conn_idx].serv_disc.last_handle);
-					}else
-					{
-							handle_service_disc_finished(conn_idx);
-					}
-					
-					
-				}break;
-				case GATTC_WRITE:
-				{
-					
-					break;
-				}
-				case GATTC_READ:
-					
-					break;
-				
-				default:
-					break;
-			}
-			
-		}break;
-		
-		case GATTC_EVENT_IND:
-		{
-	
-		}break;
-		
-		case GAPM_CMP_EVT:
-		{
-			struct gapm_cmp_evt const* evt = (struct gapm_cmp_evt const *)(param);
-			
-			if(evt->operation == GAPM_CANCEL)
-			{
-				dbg_printf("Connection Timeout\r\n", NULL);
-				ble_scan_for_devices();
-			}
-			break;
-			
-		}
-		case GATTC_SDP_SVC_IND:
-		{
-			struct gattc_sdp_svc_ind const *disc_svc = (struct gattc_sdp_svc_ind const *)(param);
-			
-			uint8_t con_idx = KE_IDX_GET(src_id);
-			handle_svc_ind(con_idx, disc_svc);
-		}break;
-		
-		case GATTC_READ_IND:
-		{
-		}break;
-				
-		default:
-			break;		
-	}	
+    switch(msgid)
+    {
+        case GATTC_CMP_EVT:
+        {
+            struct gattc_cmp_evt const* evt = (struct gattc_cmp_evt const *)(param);
+            switch(evt->operation)
+            {
+                case GATTC_SDP_DISC_SVC_ALL:
+                {
+                    if(evt->status != CO_ERROR_NO_ERROR){
+                        user_gatt_discover_all_services(conn_idx, central_app_env.periph_devices[conn_idx].serv_disc.last_handle);
+                    } else {
+                        handle_service_disc_finished(conn_idx);
+                    }
+                }
+                break;
+
+                case GATTC_WRITE:
+                    break;
+
+                case GATTC_READ:
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        break;
+
+        case GATTC_EVENT_IND:
+            break;
+
+        case GAPM_CMP_EVT:
+        {
+            struct gapm_cmp_evt const* evt = (struct gapm_cmp_evt const *)(param);
+            
+            if(evt->operation == GAPM_CANCEL)
+            {
+                dbg_printf("Connection Timeout\r\n", NULL);
+                ble_scan_for_devices();
+            }
+        }
+        break;
+
+        case GATTC_SDP_SVC_IND:
+        {
+            struct gattc_sdp_svc_ind const *disc_svc = (struct gattc_sdp_svc_ind const *)(param);
+
+            uint8_t con_idx = KE_IDX_GET(src_id);
+            handle_svc_ind(con_idx, disc_svc);
+        }
+        break;
+
+        case GATTC_READ_IND:
+            break;
+
+        default:
+            break;
+    }
 } 
 
 /// @} APP

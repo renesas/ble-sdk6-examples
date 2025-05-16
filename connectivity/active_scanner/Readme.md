@@ -15,7 +15,7 @@ The user can read the peripheral advertising data in a friendly way on its seria
 * **Software configuration**
 
     - This example requires:
-        * [SDK6 latest version](https://www.renesas.com/us/en/document/swo/sdk60221401-da1453x-da145856?r=1564826).
+        * [SDK6 latest version](https://www.renesas.com/sdk6_latest).
         * SEGGER’s J-Link tools should be downloaded and installed.
 
 ## Note

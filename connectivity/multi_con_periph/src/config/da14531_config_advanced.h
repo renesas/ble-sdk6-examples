@@ -5,7 +5,7 @@
  *
  * @brief Advanced compile configuration file.
  *
- * Copyright (C) 2014-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2014-2024 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -195,7 +195,11 @@
 /* Maximum retention memory in bytes. The base address of the retention data is calculated from the selected    */
 /* size.                                                                                                        */
 /****************************************************************************************************************/
-#define CFG_RET_DATA_SIZE    (2048)
+#if defined(__clang__)
+#define CFG_RET_DATA_SIZE    (2400)
+#else
+#define CFG_RET_DATA_SIZE    (2200)
+#endif 
 
 /****************************************************************************************************************/
 /* Maximum uninitialized retained data required by the application.                                             */
@@ -210,11 +214,8 @@
 /*     - CFG_RETAIN_RAM_2_BLOCK: if defined, the 2nd RAM block must be retained.                                */
 /* By default, the SDK keeps all RAM cells retained.                                                            */
 /****************************************************************************************************************/
-#undef CFG_CUSTOM_SCATTER_FILE
-#ifdef CFG_CUSTOM_SCATTER_FILE
-    #define CFG_RETAIN_RAM_1_BLOCK
-    #define CFG_RETAIN_RAM_2_BLOCK
-#endif
+#define CFG_RETAIN_RAM_1_BLOCK
+#define CFG_RETAIN_RAM_2_BLOCK
 
 /****************************************************************************************************************/
 /* Non-retained heap handling. The non-retained heap is either empty or not, and it may fill with messages      */
@@ -243,6 +244,11 @@
 /* scatter file is not used the following macro must define the code size in bytes for the OTP copy.            */
 /****************************************************************************************************************/
 #undef CFG_CODE_SIZE_FOR_OTP_COPY_ON
+
+/****************************************************************************************************************/
+/* Uses long range extender (e.g. SKY66111).                                                                    */
+/****************************************************************************************************************/
+#undef CFG_RANGE_EXT
 
 /****************************************************************************************************************/
 /* Temperature range selection (it applies to hibernation mode only).                                           */

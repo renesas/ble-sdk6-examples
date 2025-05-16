@@ -1,8 +1,8 @@
-# DA1453x and DA14585/586 ibeacon
+# DA1453x and DA1458x ibeacon
 
 ## Example description
 
-Simple example showing how to implement an iBeacon on the DA14531, DA14585/586. All beacon payload
+Simple example showing how to implement an iBeacon on the DA1453x, DA1458x. All beacon payload
 parameters (advertising interval, UUID etc.) are easily configurable from within the user
 application (user_app.c).
 
@@ -14,14 +14,26 @@ generated on each DA1453x or DA14585/586 on which this is example is run).
 By default the output power is set to 0dBm. This can be increased to +2.5dBm (only for the DA1453x) by defining the
 macro TX_POWER_2d5Bm (see the macro definitions at the start of the user_app.c file).
  	
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+	
+	
 ## HW and SW configuration
 
 
 * **Hardware configuration**
 
-	- This example runs on the DA1453x or DA14585/DA14586 Bluetooth Smart SoC device.
-	- For running the example on DA1453x, a [USB Kit](https://www.dialog-semiconductor.com/products/da14531-development-kit-usb) , [PRO_531](https://www.renesas.com/us/en/products/wireless-connectivity/bluetooth-low-energy/da14531-00fxdevkt-p-smartbond-tiny-da14531-bluetooth-low-energy-51-system-chip-development-kit-pro) or [PRO_53x](https://www.renesas.com/us/en/products/wireless-connectivity/bluetooth-low-energy/da14535-00fxdevkt-p-smartbond-tiny-da14535-bluetooth-low-energy-53-soc-development-kit-pro) Development kit along with a DA1453x Daughter Board is needed.
-  - For running the example on DA14585/586, a [Basic](https://www.renesas.com/us/en/products/wireless-connectivity/bluetooth-low-energy/da14585-00atdevkt-b-smartbond-da14585-bluetooth-low-energy-basic-development-kit) Development kit along with a DA14585 or a DA14586 Daughter Board is needed.
+- For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
+
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
+
+- For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 	
 ## Software Configuration
 - Download the [SDK6 latest version](https://www.renesas.com/sdk6_latest)
@@ -29,12 +41,10 @@ macro TX_POWER_2d5Bm (see the macro definitions at the start of the user_app.c f
 - If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
 
 
-
-
 ## Using e² studio with LLVM
 Setup for e² studio
-#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
+#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
 #. Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
 

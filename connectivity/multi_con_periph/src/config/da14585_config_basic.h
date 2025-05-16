@@ -118,9 +118,4 @@
 #undef CFG_UART_DMA_SUPPORT
 #undef CFG_SPI_DMA_SUPPORT
 #undef CFG_I2C_DMA_SUPPORT
-
-/****************************************************************************************************************/
-/* Enable multiple connections configuration                                                                    */
-/****************************************************************************************************************/
-#define CFG_ENABLE_MULTIPLE_CONN
 #endif // _DA14585_CONFIG_BASIC_H_

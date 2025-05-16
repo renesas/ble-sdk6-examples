@@ -181,214 +181,21 @@ void user_on_disconnect( struct gapc_disconnect_ind const *param)
                 param->reason);
 }
 
-static void custom_append_device_name(uint8_t *len,
-                                      const uint8_t name_length,
-                                      uint8_t *data,
-                                      const void *name_data)
-{
-    // Fill Length
-    data[0] = name_length + 1;
-
-    // Fill Device Name Flag
-    data[1] = GAP_AD_TYPE_COMPLETE_NAME;
-
-    // Copy device name
-    memcpy(&data[2], name_data, name_length);
-
-    // Update advertising or scan response data length
-    *len += name_length + 2;
-}
-
 void user_app_adv_start(void)
 {
-    ke_task_id_t task_id;
-    struct gapm_start_advertise_cmd* cmd;
-    cmd = app_advertise_start_msg_create();
-    
-    cmd->op.code = GAPM_ADV_UNDIRECT;
-    cmd->op.addr_src = user_adv_conf.addr_src;
-    cmd->intv_min = user_adv_conf.intv_min;
-    cmd->intv_max = user_adv_conf.intv_max;
-    cmd->channel_map = user_adv_conf.channel_map;
-    cmd->info.host.mode = user_adv_conf.mode;
-    cmd->info.host.adv_filt_policy = user_adv_conf.adv_filt_policy;
-    cmd->info.host.adv_data_len = USER_ADVERTISE_DATA_LEN;
-    memcpy(&(cmd->info.host.adv_data[0]), USER_ADVERTISE_DATA, USER_ADVERTISE_DATA_LEN);
-    cmd->info.host.scan_rsp_data_len = USER_ADVERTISE_SCAN_RESPONSE_DATA_LEN;
-    memcpy(&(cmd->info.host.scan_rsp_data[0]), USER_ADVERTISE_SCAN_RESPONSE_DATA, USER_ADVERTISE_SCAN_RESPONSE_DATA_LEN);
-    
-    // Place the Device Name in the Advertising Data or in the Scan Response Data
-    if (USER_DEVICE_NAME_LEN > 0)
-    {
-        // Get remaining space in the Advertising Data ( plus 2 bytes are used for the length and flag bytes of the Device Name and 3 bytes for the AD type flags)
-        uint16_t total_adv_space = 3 + cmd->info.host.adv_data_len + 2 + USER_DEVICE_NAME_LEN;
-        // Get remaining space in the Scan Response Data ( plus 2 bytes are used for the length and flag bytes of the Device Name)
-        uint16_t total_scan_space = cmd->info.host.scan_rsp_data_len + 2 + USER_DEVICE_NAME_LEN;
-
-        if (total_adv_space <= ADV_DATA_LEN)
-        {
-            custom_append_device_name(&cmd->info.host.adv_data_len,
-                                      USER_DEVICE_NAME_LEN,
-                                      &(cmd->info.host.adv_data[cmd->info.host.adv_data_len]),
-                                      USER_DEVICE_NAME);
-        }
-        else if (total_scan_space <= SCAN_RSP_DATA_LEN)
-        {
-            custom_append_device_name(&cmd->info.host.scan_rsp_data_len,
-                                      USER_DEVICE_NAME_LEN,
-                                      &(cmd->info.host.scan_rsp_data[cmd->info.host.scan_rsp_data_len]),
-                                      USER_DEVICE_NAME);
-        }
-     }
-
-    // Send the message
-    app_advertise_start_msg_send(cmd);
-    
-    // Set proper states only to those tasks which are currently disconnected
-    for(uint8_t idx = 0; idx < APP_IDX_MAX; idx++)
-    {
-        task_id = KE_BUILD_ID(TASK_APP, idx); 	
-		// Check if we are not already in a connected state	
-		if (ke_state_get(task_id) != APP_CONNECTED)
-        {
-            ke_state_set(task_id, APP_CONNECTABLE);
-        }
-    }  
-    
+    app_easy_gap_undirected_advertise_start();
     arch_printf("Device is Advertising \n\r");
     print_out_connected_dev();
 }
 
-/**
- ****************************************************************************************
- * @brief Handles connection complete event from the GAP. Will enable profile.
- *          Custom function for multi-connection peripheral
- * @param[in] msgid     Id of the message received.
- * @param[in] param     Pointer to the parameters of the message.
- * @param[in] dest_id   ID of the receiving task instance (TASK_GAP).
- * @param[in] src_id    ID of the sending task instance.
- * @return If the message was consumed or not.
- ****************************************************************************************
- */
-int gapc_connection_req_ind_handler(ke_msg_id_t const msgid,
-                                           struct gapc_connection_req_ind const *param,
-                                           ke_task_id_t const dest_id,  // dest_id -> TASK_APP
-                                           ke_task_id_t const src_id)   // src_id -> TASK_GAPC
-{
-    uint8_t conidx = KE_IDX_GET(src_id);
-    uint8_t current_state = ke_state_get(KE_BUILD_ID(KE_TYPE_GET(dest_id), conidx));
-    
-    // Connection Index
-    if (current_state == APP_CONNECTABLE)
-    {
-        ASSERT_WARNING(conidx < APP_EASY_MAX_ACTIVE_CONNECTION);
-        app_env[conidx].conidx = conidx;
-
-        if (conidx != GAP_INVALID_CONIDX)
-        {
-            app_env[conidx].connection_active = true;
-            ke_state_set(KE_BUILD_ID(KE_TYPE_GET(dest_id), conidx), APP_CONNECTED); //SUPBLE_6975
-            // Retrieve the connection info from the parameters
-            app_env[conidx].conhdl = param->conhdl;
-            app_env[conidx].peer_addr_type = param->peer_addr_type;
-            memcpy(app_env[conidx].peer_addr.addr, param->peer_addr.addr, BD_ADDR_LEN);
-            #if (BLE_APP_SEC)
-            // send connection confirmation
-                app_easy_gap_confirm(conidx, (enum gap_auth) app_sec_env[conidx].auth, 1);
-            #else
-                app_easy_gap_confirm(conidx, GAP_AUTH_REQ_NO_MITM_NO_BOND, 1);
-            #endif
-        }
-        CALLBACK_ARGS_2(user_app_callbacks.app_on_connection, conidx, param)
-    }
-    else
-    {
-        // APP_CONNECTABLE state is used to wait the GAP_LE_CREATE_CONN_REQ_CMP_EVT message
-        ASSERT_ERROR(0);
-    }
-
-    return (KE_MSG_CONSUMED);
-}
-
-/**
- ****************************************************************************************
- * @brief Handles disconnection complete event from the GAP. Custom function for the 
- *          multiconnection.
- * @param[in] msgid     Id of the message received.
- * @param[in] param     Pointer to the parameters of the message.
- * @param[in] dest_id   ID of the receiving task instance (TASK_GAP).
- * @param[in] src_id    ID of the sending task instance.
- * @return If the message was consumed or not.
- ****************************************************************************************
- */
-int gapc_disconnect_ind_handler(ke_msg_id_t const msgid,
-                                       struct gapc_disconnect_ind const *param,
-                                       ke_task_id_t const dest_id,
-                                       ke_task_id_t const src_id)
-{
-    uint8_t conidx = KE_IDX_GET(src_id);
-    uint8_t state = ke_state_get(KE_BUILD_ID(KE_TYPE_GET(dest_id), conidx));
-    
-    if (state == APP_CONNECTED)
-    {
-        app_env[conidx].conidx = GAP_INVALID_CONIDX;
-        app_env[conidx].connection_active = false;
-        ke_state_set(KE_BUILD_ID(KE_TYPE_GET(dest_id), conidx), APP_CONNECTABLE);
-        CALLBACK_ARGS_1(user_app_callbacks.app_on_disconnect, param);
-    }
-    else
-    {
-        // We are not in Connected State
-        ASSERT_ERROR(0);
-    }
-
-    return (KE_MSG_CONSUMED);
-}
-
-bool app_db_init_start(void)
-{
-    // Indicate if more services need to be added in the database
-    bool end_db_create;
-
-    // We are now in Initialization State
-    for(uint8_t idx = 0; idx < APP_IDX_MAX; idx++)
-        ke_state_set(KE_BUILD_ID(TASK_APP, idx), APP_DB_INIT);
-
-    //end_db_create = app_db_init_next();
-
-    return end_db_create;
-}
-
-void user_app_on_set_dev_config_complete(void)
-{
-    // Add the first required service in the database
-    if (app_db_init_start())
-    {
-        // No more service to add, start advertising
-        CALLBACK_ARGS_0(user_default_app_operations.default_operation_adv)
-    }
-}
-
 void user_app_on_init(void)
 {
+    default_app_on_init();
+    
     for(uint8_t idx = 0; idx < APP_IDX_MAX; idx++)  
     {
-        app_env[idx].conidx = GAP_INVALID_CONIDX;
-
         user_app_env[idx].conidx = GAP_INVALID_CONIDX;
-        
-        ke_state_set(KE_BUILD_ID(TASK_APP, idx), APP_DISABLED);
     }
-
-#if BLE_DIS_SERVER
-    app_dis_init();
-#endif
-
-    // Initialize service access write permissions for all the included profiles
-    prf_init_srv_perm();
-
-    // Set sleep mode
-    arch_set_sleep_mode(app_default_sleep_mode);
 }
 
 void user_catch_rest_hndl(ke_msg_id_t const msgid,

@@ -12,6 +12,7 @@ See the [DA14531 Datasheet](https://www.renesas.com/us/en/document/dst/da14531-d
     - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
     - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
     - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 - This project starts with undirected connectable advertising
 
@@ -60,7 +61,7 @@ To run the program from flash or OTP, please visit Programmer operations chapter
 	
 * **Software configuration**
 
-	- SmartSnippets Toolbox v5.0.24
+	- SmartSnippets Toolbox v5.0.26
 	- [SDK6 latest version](https://www.renesas.com/sdk6_latest)
 	- Keil5
 	- SEGGER’s J-Link tools should be downloaded and installed.

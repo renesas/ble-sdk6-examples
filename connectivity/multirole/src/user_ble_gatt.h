@@ -54,8 +54,6 @@
 #include "user_ble_common.h"
 #include "gattc_task.h"
 
-
-
 /**
  ****************************************************************************************
  * @brief Perform a service discovery

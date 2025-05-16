@@ -2,13 +2,15 @@
 
 ## Example description
 
-This example updates the basic proximity monitor service demonstration from the standard SDK `6.0.22.1401\projects\target_apps\ble_examples\prox_reporter_ext`. this example includes the device information client service and uses the External Processor configuration with GTL over UART. This setup allows the DA14531 and DA14535 PMOD devices to boot from an external MCU.
+This example updates the basic proximity monitor service demonstration from the standard SDK `6.0.24.1464\projects\target_apps\ble_examples\prox_reporter_ext`. this example includes the device information client service and uses the External Processor configuration with GTL over UART. This setup allows the DA14531 and DA14535 PMOD devices to boot from an external MCU.
 
 - Devices naming:
     - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
     - DA1458x is refering to DA14585 and DA14586.
     - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
     - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 ## HW and SW configuration
 
 - **Hardware configuration**
@@ -20,6 +22,8 @@ This example updates the basic proximity monitor service demonstration from the 
     - For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
 
     - For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+
+    - For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
     - For detailed instructions to build a fully working solution that allows booting from host Renesas microcontroller please refer to the [UM-B-172: Getting started with DA1453x and FSP BLE Framework on Renesas Microcontrollers](https://lpccs-docs.renesas.com/DA1453x-FSP_BLE_Framework/UM-B-172/index.html).
 

@@ -1,4 +1,4 @@
-# DA1453x and DA14585/586 - Changing advertising methods using GPIO button interrupt or timer callbacks
+# DA1453x and DA1458x - Changing advertising methods using GPIO button interrupt or timer callbacks
 
 ## Example description
 
@@ -11,6 +11,13 @@ This example shows how to:
 The expected result of the example can be verified by:
 - Connecting a serial terminal on the work station to the MB (Mother Board) using UART.
 - The status of the LED.
+
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 ## HW and SW configuration
 
@@ -37,7 +44,7 @@ The user manuals for the development kits can be found:
 
 	![Motherboard_Hardware_Configuration_DA14531](assets/Motherboard_Hardware_Configuration_DA14531.svg)
 		
-	![Motherboard_Hardware_Configuration_DA14535](assets/Motherboard_Hardware_Configuration_DA14535.svg)
+	![Motherboard_Hardware_Configuration_DA14535](assets/da14535.svg)
 
 * __Hardware configuration DA14585 using the DA145xxDEVKT-P PRO-Motherboard__
 
@@ -61,8 +68,9 @@ The user manuals for the development kits can be found:
 
 
 ## Software Configuration
-Download the latest version of [SDK6 latest version](https://www.dialog-semiconductor.com/da14531_sdk_latest)..
-Install SEGGER’s J-Link tools.
+- Download the [SDK6 latest version](https://www.renesas.com/sdk6_latest)
+- Install SEGGER’s J-Link tools.
+- If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
 
 Keil5.
 __SEGGER’s J-Link__ tools should be downloaded and installed.
@@ -70,13 +78,10 @@ Serial Terminal software. For example Tera Term or PuTTY.
 
 If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
 
-
-
-
 ## Using e² studio with LLVM
 Setup for e² studio
-#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
+#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
 #. Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
 
@@ -86,9 +91,6 @@ Setup for e² studio
 By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
 
 For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
-
-	
-
 
 ## How to run the example
 
@@ -182,7 +184,6 @@ This example can be built by e2studio and LLVM compiler instead of using Keil.
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
 
 
 ## Known Limitations

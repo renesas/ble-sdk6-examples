@@ -1,4 +1,4 @@
-# DA1453x and DA14585/586 Burst Advertising with Bluetooth LE
+# DA1453x and DA1458x Burst Advertising with Bluetooth LE
 
 ## Example description
 
@@ -8,12 +8,13 @@ a delay before sending another group of advertising events. This example allows 
 user to configure the number of advertising events to be transmitted per burst and 
 the time between bursts. 
 
-Devices naming:
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
-- DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
-- DA1458x is refering to DA14585 and DA14586.
-- The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
-- The DA14535 is a DA14531 upgrade.	
 ## HW and SW configuration
 
 - This example runs on the DA1453x (DA14531-00, DA14531-01 and DA14535) and DA14585/586 Bluetooth Smart SoC devices.
@@ -39,20 +40,15 @@ For the UART to see the communication logs, check the setup shown below for DA14
 
 - This example works also on the DA1453x DEVKT-P with with any DA1453x Daughterboard and with the same UART connection.
 	![Motherboard_Hardware_Configuration_DA14531](assets/da14535.svg)
-The user manuals for the development kits can be found:
-
-- [Here](https://www.dialog-semiconductor.com/products/da14531-development-kit-pro) for the DA145xxDEVKT-P PRO-Motherboard.
 
 ## Software Configuration
 - Download the [SDK6 latest version](https://www.renesas.com/sdk6_latest)
 - Install SEGGER’s J-Link tools.
 - If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
 
-
-
-
 ## Using e² studio with LLVM
 Setup for e² studio
+
 #. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
 
@@ -64,13 +60,6 @@ Setup for e² studio
 By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
 
 For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
-
-	
-### Software configuration
-
-- This example requires:
-    * Smartsnippets Studio 2.0.16 (or later)
-    * [SDK6 always latest version](https://www.dialog-semiconductor.com/da14531_sdk_latest).
 
 ## How to run the example
 

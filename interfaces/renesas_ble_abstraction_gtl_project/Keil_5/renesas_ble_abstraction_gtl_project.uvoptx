@@ -888,7 +888,7 @@
 
   <Group>
     <GroupName>sdk_boot</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -907,12 +907,12 @@
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>2</FileNumber>
-      <FileType>2</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</PathWithFileName>
-      <FilenameWithoutPath>startup_DA14585_586.s</FilenameWithoutPath>
+      <PathWithFileName>.\..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</PathWithFileName>
+      <FilenameWithoutPath>startup_DA14585_586.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -931,12 +931,12 @@
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>4</FileNumber>
-      <FileType>2</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</PathWithFileName>
-      <FilenameWithoutPath>startup_DA14531.s</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</PathWithFileName>
+      <FilenameWithoutPath>startup_DA14531.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -955,12 +955,12 @@
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>6</FileNumber>
-      <FileType>2</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</PathWithFileName>
-      <FilenameWithoutPath>startup_DA14535.s</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</PathWithFileName>
+      <FilenameWithoutPath>startup_DA14535.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1180,7 +1180,7 @@
 
   <Group>
     <GroupName>sdk_driver</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1644,7 +1644,7 @@
 
   <Group>
     <GroupName>user_config</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

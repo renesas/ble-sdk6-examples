@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out_DA14585\Objects\</OutputDirectory>
-          <OutputName>prox_reporter_585</OutputName>
+          <OutputName>Central_DA14585</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -391,9 +391,9 @@
               <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -452,9 +452,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -473,24 +473,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -551,9 +564,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -572,24 +585,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -1306,26 +1332,6 @@
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bass\app_bass_task.c</FilePath>
             </File>
             <File>
-              <FileName>app_proxr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_proxr_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar_task.c</FilePath>
-            </File>
-            <File>
               <FileName>app_bond_db.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bond_db\app_bond_db.c</FilePath>
@@ -1339,6 +1345,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1467,7 +1478,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out_DA14586\Objects\</OutputDirectory>
-          <OutputName>prox_reporter_586</OutputName>
+          <OutputName>Central_DA14586</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -1809,9 +1820,9 @@
               <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -1870,9 +1881,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -1891,24 +1902,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -1969,9 +1993,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -1990,24 +2014,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -2724,26 +2761,6 @@
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bass\app_bass_task.c</FilePath>
             </File>
             <File>
-              <FileName>app_proxr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_proxr_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar_task.c</FilePath>
-            </File>
-            <File>
               <FileName>app_bond_db.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bond_db\app_bond_db.c</FilePath>
@@ -2757,6 +2774,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3150,7 +3172,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>7</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>0</OneElfS>
@@ -3278,9 +3300,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -3299,24 +3321,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -3326,9 +3361,9 @@
               <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\system_DA14531.c</FilePath>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -3387,9 +3422,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -3408,24 +3443,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -4142,26 +4190,6 @@
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bass\app_bass_task.c</FilePath>
             </File>
             <File>
-              <FileName>app_proxr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_proxr_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar_task.c</FilePath>
-            </File>
-            <File>
               <FileName>app_bond_db.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bond_db\app_bond_db.c</FilePath>
@@ -4175,6 +4203,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -4303,7 +4336,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out_DA14535\Objects\</OutputDirectory>
-          <OutputName>prox_reporter_535</OutputName>
+          <OutputName>Central_DA14535</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -4696,9 +4729,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -4717,24 +4750,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -4795,9 +4841,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -4816,24 +4862,37 @@
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
-                  <Aads>
+                  <Cads>
                     <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
                     <Ropi>2</Ropi>
                     <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
                     <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
-                  </Aads>
+                  </Cads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -4843,9 +4902,9 @@
               <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\system_DA14535.c</FilePath>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\..\..\..\..\\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
             </File>
             <File>
               <FileName>hardfault_handler.c</FileName>
@@ -5356,26 +5415,6 @@
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bass\app_bass_task.c</FilePath>
             </File>
             <File>
-              <FileName>app_proxr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_proxr_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_proxr\app_proxr_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_suotar_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_suotar\app_suotar_task.c</FilePath>
-            </File>
-            <File>
               <FileName>app_bond_db.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_bond_db\app_bond_db.c</FilePath>
@@ -5389,6 +5428,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>

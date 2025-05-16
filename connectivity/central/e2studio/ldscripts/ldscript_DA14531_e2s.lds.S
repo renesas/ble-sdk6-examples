@@ -5,7 +5,7 @@
  *
  * @brief Common GNU LD linker script file.
  *
- * Copyright (C) 2018-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2018-2024 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -52,13 +52,11 @@ SECTIONS
         KEEP(*(.vectors))
         KEEP(*(otp_cs_booter))
 
-        . = BOOT_VECTOR_AREA_SZ;
     } > LR_IROM1
 
     ER_IROM2 :
     {
         KEEP(*(.patch_table))
-        . = PATCH_TABLE_AREA_SZ;
     } > LR_IROM2
 
     ER_IROM3 :
@@ -91,9 +89,9 @@ SECTIONS
     {
         . = ALIGN(4);
         __copy_table_start__ = .;
-        LONG (__etext)
+        LONG (LOADADDR(.data))
         LONG (__data_start__)
-        LONG (__data_end__ - __data_start__)
+        LONG ((__data_end__ - __data_start__)/4)
         __copy_table_end__ = .;
     } > LR_IROM3
 
@@ -102,10 +100,10 @@ SECTIONS
         . = ALIGN(4);
         __zero_table_start__ = .;
         LONG (__bss_start__)
-        LONG (__bss_end__ - __bss_start__)
+        LONG ((__bss_end__ - __bss_start__)/4)
 
         LONG (__ret_data_start__)
-        LONG (__ret_data_end__ - __ret_data_start__)
+        LONG ((__ret_data_end__ - __ret_data_start__)/4)
 
         __zero_table_end__ = .;
     } > LR_IROM3
@@ -151,6 +149,12 @@ SECTIONS
         /* All data end */
         __data_end__ = .;
     } > LR_IROM3
+	__data_start = ADDR(.data);
+	__data_size = 0;
+	__data_source = LOADADDR(.data);
+	
+	__tls_base = 0;
+	__arm32_tls_tcb_offset = 0;
 
     __code_area_end__ = .;
 
@@ -163,6 +167,9 @@ SECTIONS
         . = ALIGN(4);
         __bss_end__ = .;
     } > LR_IROM3
+	
+	__bss_start = __bss_start__;
+	__bss_size = SIZEOF(.bss);
 
     ER_PRODTEST (NOLOAD):
     {
@@ -206,9 +213,9 @@ SECTIONS
     /* Set stack top to end of LR_IROM3 before the retained section,
      * and stack limit moves down by size of stack_dummy section.
      */
-__StackTop = ORIGIN(LR_IROM3) + LENGTH(LR_IROM3);
-__StackLimit = __StackTop - 0x1000;  /* Reduce stack size by 4 KB */
-PROVIDE(__stack = __StackTop);
+    __StackTop = ORIGIN(LR_IROM3) + LENGTH(LR_IROM3);
+    __StackLimit = __StackTop - SIZEOF(.stack_dummy);
+    PROVIDE(__stack = __StackTop);
 
     /* Check if data + heap + stack exceeds RAM limit */
     ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
@@ -302,7 +309,7 @@ PROVIDE(__stack = __StackTop);
 #if defined (CFG_TRNG)
     RET_DATA_UNINIT_TRNG_STATE (NOLOAD) :
     {
-        *trng.o(trng_state)         /* flag to decide if TRNG must run or not in order to generate the seed number */
+        *(trng_state)         /* flag to decide if TRNG must run or not in order to generate the seed number */
     } > LR_RETAINED_TRNG_STATE
 #endif /* defined (CFG_TRNG) */
 

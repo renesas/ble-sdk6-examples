@@ -4,6 +4,12 @@
 
 The main purpose of this SW example is to demonstrate how to configure the RTC in order to keep time while the BLE is operating as well as use the **EVENTS** and **ALARMS** available on the RTC HW.
 
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 ## Features
 
 - Advertise the current Time/Date
@@ -216,11 +222,9 @@ A 128-bit UUID custom service is also exposed with 3 custom characteristics for 
 - Install SEGGER’s J-Link tools.
 - If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
 
-
-
-
 ## Using e² studio with LLVM
 Setup for e² studio
+
 #. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
 
@@ -239,7 +243,7 @@ For detailed steps on using e² studio, refer to the Renesas e² studio User Gui
 
 ### Initial Setup
 
-For the initial setup section: refer to this : https://github.com/dialog-semiconductor/BLE_SDK6_examples/blob/main/Readme.md
+For the initial setup section: refer to this : https://github.com/renesas/ble-sdk6-examples/blob/main/Readme.md
 
 ## How it works
 
