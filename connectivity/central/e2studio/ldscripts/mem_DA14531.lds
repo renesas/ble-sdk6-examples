@@ -124,8 +124,7 @@
 MEMORY
 {
     LR_IROM1          (rwx) : ORIGIN = SRAM_BASE_ADDR,                                              LENGTH = BOOT_VECTOR_AREA_SZ
-    LR_IROM2 (rwx) : ORIGIN = SRAM_BASE_ADDR + BOOT_VECTOR_AREA_SZ, LENGTH = PATCH_TABLE_AREA_SZ
-
+    LR_IROM2          (rwx) : ORIGIN = SRAM_BASE_ADDR + BOOT_VECTOR_AREA_SZ,                        LENGTH = PATCH_TABLE_AREA_SZ
     LR_IROM3          (rwx) : ORIGIN = CODE_AREA_BASE,                                              LENGTH = CODE_AREA_SIZE
     LR_RETAINED_RAM0  (rw)  : ORIGIN = RET_MEM_BASE_ADDR,                                           LENGTH = RET_MEM_SIZE
     /* After this there's only BLE Exchange Memory, externally defined by the __SCT_BLE_BASE address and with custom zeroing code in arch_rom.c */
@@ -137,8 +136,7 @@ MEMORY
     LR_FREE_AREA_AT_TX_ADV_2_BUFFER     (rwx)  : ORIGIN = FREE_AREA_AT_TX_ADV_2_BUFFER_BASE_ADDR,   LENGTH = FREE_AREA_AT_TX_ADV_2_BUFFER_SIZE
     LR_FREE_AREA_AT_TX_ADV_3_BUFFER     (rwx)  : ORIGIN = FREE_AREA_AT_TX_ADV_3_BUFFER_BASE_ADDR,   LENGTH = FREE_AREA_AT_TX_ADV_3_BUFFER_SIZE
 #endif
-    LR_FREE_AREA (rwx) : ORIGIN = FREE_AREA_BASE_ADDR, LENGTH = (FREE_AREA_SIZE - 0x200)
-
+    LR_FREE_AREA                        (rwx)  : ORIGIN = FREE_AREA_BASE_ADDR,                      LENGTH = FREE_AREA_SIZE
     /* Fixed area used by TRNG */
     LR_RETAINED_TRNG_STATE   (rw)  : ORIGIN = TRNG_STATE_BASE_ADDR,                                 LENGTH = RET_DATA_UNINIT_TRNG_STATE_SIZE
     /* Fixed area used by CHACHA20 */

@@ -107,22 +107,6 @@ void user_app_adv_start(void);
 
 /**
  ****************************************************************************************
- * @brief User function called on device configuration completion event.
- ****************************************************************************************
- */
-void user_app_on_set_dev_config_complete(void);
-
-/**
- ****************************************************************************************
- * @brief Start placing services in the database.
- * @return true if succeeded, else false
- * @details Overridden SDK function.  
- ****************************************************************************************
- */
-bool app_db_init_start(void);
-
-/**
- ****************************************************************************************
  * @brief Application initialization function.
  ****************************************************************************************
 */
@@ -141,7 +125,7 @@ void user_catch_rest_hndl(ke_msg_id_t const msgid,
                           void const *param,
                           ke_task_id_t const dest_id,
                           ke_task_id_t const src_id);
-                          
+
 /**
  ****************************************************************************************
  * @brief Return the application connection index based on the stored bd address 

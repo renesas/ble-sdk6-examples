@@ -9,11 +9,17 @@ This example shows:
 - How to measure the temperature using DA14531 internal temperature sensor.
 
 **Note 1** 
-The internal temperature sensor is not available for the DA14585 and DA14586.
+The internal temperature sensor is not available for the DA1458x.
 
 **Note 2** 
 The functionality can be verified by BLE notifications.
 
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 ## HW and SW configuration
 
@@ -22,8 +28,14 @@ This example runs on the BLE Smart SoC (System on Chip) devices:
 - DA14585/DA14586 daughter board + Basic development Kit mother board.
 
 The user manuals for the development kits can be found:
-- [Here](https://www.dialog-semiconductor.com/products/da14531-development-kit-pro) for the DA145xxDEVKT-P PRO-Motherboard.
-- [Here](https://www.dialog-semiconductor.com/sites/default/files/um-b-048_da14585da14586_getting_started_guide_v2.0_0.pdf) for the Basic Development Kit.
+
+- For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
+
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
+
+- For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
 __Hardware configuration DA14531 using DA145xxDEVKT-P PRO-Motherboard__
 	
@@ -77,7 +89,7 @@ __Software configuration__
 
 This example requires:
 
-- [SDK6 latest version](https://www.renesas.com/eu/en/document/swo/sdk601811821-da1453x-da145856).
+- The [SDK6 latest version](https://www.renesas.com/sdk6_latest)
 - Keil5.
 - __SEGGER’s J-Link__ tools should be downloaded and installed..
 
@@ -85,6 +97,7 @@ This example requires:
 ## How to run the example
 
 ### Setup
+
 For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](../../Readme.md).
 
 
@@ -113,11 +126,10 @@ custom action: a write to the notification. When this occurs the **user_temperat
 anything else, a timer is generated that calls **user_send_temperature_ntf** after NOTIFICATION_DELAY ms. **user_send_temperature_ntf** will read out the sensor data and convert it to a string(for demo purposes). The string will be placed in a message, along with some other parameters, like the connection ID
 and the characteristic handle. After the message is sent, the app_easy_timer function is used to schedule the next call to the **user_send_temperature_ntf** function. This will ensure the temperature is transmitted regularly. The `app_easy_timer`function
 has a resolution of 10ms hence we divide the desired delay in ms by 10.
+
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
-
 
 ## Known Limitations
 

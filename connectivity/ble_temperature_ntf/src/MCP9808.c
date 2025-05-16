@@ -103,7 +103,7 @@ temperature_resolution MCP9808_get_resolution_register(void){
 uint16_t MCP9808_read_temperature_register(void){
 	if(TEMPERATURE_REGISTER_SIZE%1 != 0 || TEMPERATURE_REGISTER_SIZE<1){//pre defined conditions size must be an unsigned integer greater than 0
 		//insert error handler
-		return NULL;
+		return 0xFFFF;
 	}
 
 	uint8_t buffer[2];

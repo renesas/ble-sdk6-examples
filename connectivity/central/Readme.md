@@ -1,4 +1,4 @@
-# DA1453x and DA14585/586 Central Implementation
+# DA1453x and DA1458x Central Implementation
 
 ## Example description
 
@@ -15,14 +15,13 @@ This functionality can be verified by:
 - Connecting to another peripheral device (Out of the Box supports Proximity Reporter)
 - Reading serial output from the device.
 
-Devices naming:
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
-- DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
-- DA1458x is refering to DA14585 and DA14586.
-- The DA14531-00 is the main DA14531 device.
--  The -00 is just a new naming to introduce the variant DA14531-01. 
-- The DA14531-01 is a ROM variant of the main DA14531-00, not supported by this example.
-- The DA14535 is a DA14531 upgrade.	
 
 ## HW configuration
 
@@ -38,9 +37,7 @@ This example runs on the BLE Smart SoC (System on Chip) devices:
 
 - For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
 - For the DA14585/586 getting started guide you can refer to this [UM-B-049](https://lpccs-docs.renesas.com/da14585_getting_started/index.html).
-
-
-
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
 
 * **Hardware configuration using the DA145xxDEVKT-P PRO-Motherboard**
@@ -133,7 +130,8 @@ If the warning (shown below) pops up press OK.
 
 
 ### General Project Notes
- - This example illustrates the basic building blocks for implementing a central device.  The 5xx devices are limited on memory and this should be taken into consideration
+
+This example illustrates the basic building blocks for implementing a central device.  The 5xx devices are limited on memory and this should be taken into consideration
 when implementing a central on the 5xx devices, is the limitation on memory.  The central devices should be geared more toward specific applications, opposed to a more generic central.  
 This example was written generically enough that it can be exanded on for a central application.
 

@@ -1,21 +1,29 @@
-# DA1453x and DA14585/586 BLE Notifications on Button Press with Wake-up Controller
+# DA1453x and DA1458x BLE Notifications on Button Press with Wake-up Controller
 
 ## Example description
 
 This example shows how to configure a DA14531 or DA14585/586 device to send notifications to a BLE central by button presses. The application advertises its presence and waits for a connection. When a central is connected and enables notifications, the application will be able to deliver notifications when the user presses one of the programmable buttons. The service also waits for a predefined message to which it will respond. 
 
-## HW and SW configuration
-- This example runs on the DA14531 or DA14585/586 Bluetooth Smart SoC devices.	
-- The DA145xx Pro Development Kit is needed for this example, and it can be used with either the DA14531 or DA14585/DA14586 daughterboard evaluation kits.
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
-### Hardware configuration for the DA14531
+
+## HW and SW configuration
+- This example runs on the DA1453x or DA1458x Bluetooth Smart SoC devices.	
+- The DA145xx Pro Development Kit is needed for this example, and it can be used with either the DA1453x or DA1458x daughterboard evaluation kits.
+
+### Hardware configuration for the DA1453x
 
 - Connect the USB1 connector of the DA145xx Pro Development Kit to the host computer.
 - Connect the P24 pin on header J2 with the second pin on header J19 as shown in the figure below (the mark indicates the first pin). Connect with a jumper the third and fourth pins.
  
 	![j19_conf](assets/ble-notify-wkup-j19_conf.svg)
 
-### Hardware configuration for the DA14585/586
+### Hardware configuration for the DA1458x
 
 - Connect the USB1 connector of the DA145xx Pro Development Kit to the host computer.
 - Connect with a jumper the first and second pins on the J19 header (the mark indicates the first pin). Connect also with a jumper the fourth and fifth pins, as indicated in the figure below.
@@ -48,6 +56,7 @@ For the initial setup of the project that involves linking the SDK to this SW ex
  - Compile and launch the example
 
  ### Connecting to the device
+ 
  The following instructions are using the LightBlue Explorer app.
  - Start the LightBlue Explorer. The application will list all the Bluetooth devices that are advertising. 
  - Connect to the `DLG_BUTTON_NOTIFY` device

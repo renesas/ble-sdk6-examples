@@ -131,6 +131,11 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_easy/app_easy_security.c</locationURI>
 		</link>
 		<link>
+			<name>sdk_app/app_easy_storage.c</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_easy/app_easy_storage.c</locationURI>
+		</link>
+		<link>
 			<name>sdk_app/app_easy_timer.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_easy/app_easy_timer.c</locationURI>
@@ -323,7 +328,7 @@
 		<link>
 			<name>sdk_boot/startup_DA14531.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14531.c</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/startup_DA14531.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_boot/startup_DA14535.S</name>
@@ -333,17 +338,17 @@
 		<link>
 			<name>sdk_boot/startup_DA14535.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14535.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_boot/startup_DA14585.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14585.c</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/startup_DA14535.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_boot/startup_DA14585_586.S</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/arch/boot/GCC/startup_DA14585_586.S</locationURI>
+		</link>
+		<link>
+			<name>sdk_boot/startup_DA14585_586.c</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/startup_DA14585_586.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_boot/system_DA14531.c</name>

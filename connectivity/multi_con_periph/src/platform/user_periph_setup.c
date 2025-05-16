@@ -62,16 +62,14 @@ void GPIO_reservations(void)
     RESERVE_GPIO(UART2_TX, UART2_TX_PORT, UART2_TX_PIN, PID_UART2_TX);
 #endif
 
-		RESERVE_GPIO(LED, GPIO_LED_PORT, GPIO_LED_PIN, PID_GPIO);
-	
-
+    RESERVE_GPIO(LED, GPIO_LED_PORT, GPIO_LED_PIN, PID_GPIO);
 }
 
 #endif
 
 void set_pad_functions(void)
 {
-	/*
+/*
     i.e. to set P0_1 as Generic purpose Output:
     GPIO_ConfigurePin(GPIO_PORT_0, GPIO_PIN_1, OUTPUT, PID_GPIO, false);
 */

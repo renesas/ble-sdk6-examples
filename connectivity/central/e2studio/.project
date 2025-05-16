@@ -96,16 +96,6 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_bond_db/app_bond_db.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_app/app_customs.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_app/app_customs_task.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs_task.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_app/app_default_handlers.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_default_hnd/app_default_handlers.c</locationURI>
@@ -321,11 +311,6 @@
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/GCC/startup_DA14531.S</locationURI>
 		</link>
 		<link>
-			<name>sdk_boot/startup_DA14531.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14531.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_boot/startup_DA14535.S</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/GCC/startup_DA14535.S</locationURI>
@@ -333,12 +318,7 @@
 		<link>
 			<name>sdk_boot/startup_DA14535.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14535.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_boot/startup_DA14585.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/LLVM/startup_DA14585.c</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/startup_DA14535.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_boot/startup_DA14585_586.S</name>
@@ -346,19 +326,9 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/arch/boot/GCC/startup_DA14585_586.S</locationURI>
 		</link>
 		<link>
-			<name>sdk_boot/system_DA14531.c</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/arch/boot/system_DA14531.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_boot/system_DA14535.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/arch/boot/system_DA14535.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_boot/system_DA14585_586.c</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/arch/boot/system_DA14585_586.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_driver/adc_531.c</name>
@@ -426,11 +396,6 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/syscntl/syscntl.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_driver/timer0.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/driver/timer/timer0.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_driver/trng.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/trng/trng.c</locationURI>
@@ -446,11 +411,6 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/wkupct_quadec/wkupct_quadec.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_profiles/attm_db_128.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/host/att/attm/attm_db_128.c</locationURI>
-		</link>
-		<link>
 			<name>sdk_profiles/bass.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass.c</locationURI>
@@ -459,21 +419,6 @@
 			<name>sdk_profiles/bass_task.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass_task.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custom_common.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custom_common.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custs1.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1.c</locationURI>
-		</link>
-		<link>
-			<name>sdk_profiles/custs1_task.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_profiles/diss.c</name>
@@ -514,6 +459,11 @@
 			<name>sdk_profiles/suotar_task.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/suota/suotar/src/suotar_task.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/user_ble_common.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/user_ble_common.h</locationURI>
 		</link>
 		<link>
 			<name>user_app/user_ble_gap.c</name>
@@ -566,19 +516,9 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/config/user_profiles_config.h</locationURI>
 		</link>
 		<link>
-			<name>user_custom_profile/user_custs1_def.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/custom_profile/user_custs1_def.c</locationURI>
-		</link>
-		<link>
-			<name>user_custom_profile/user_custs_config.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/custom_profile/user_custs_config.c</locationURI>
-		</link>
-		<link>
 			<name>user_platform/user_periph_setup.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/platform/user_periph_setup.c</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/platform/user_periph_setup.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

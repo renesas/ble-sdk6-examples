@@ -2,7 +2,13 @@
 
 ## Example description
 
-The example demonstrates an optimized software implementation for ibeacon on the DA14531.
+The example demonstrates an optimized software implementation for ibeacon on the DA1453x.
+
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 The example is an update of the ibeacon SW example: ``BLE_SDK6_examples\connectivity\ibeacon``, below the main modifications, basically we demonstrate how to:
 
@@ -183,19 +189,19 @@ Battery Lifetime Estimator tool can be used and it can be loaded (from the Smart
 - This example runs on the DA1453x (DA14531-00, DA14531-01 and DA14535) Bluetooth Smart SoC devices.
 - The user manuals for the development kits can be found [Here](https://www.renesas.com/us/en/products/wireless-connectivity/bluetooth-low-energy/da14531-00fxdevkt-p-smartbond-tiny-da14531-bluetooth-low-energy-51-system-chip-development-kit-pro) for the DA145xxDEVKT-P PRO-Motherboard.
 - For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
-
 - For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
 ## Software Configuration
-Download the latest version of [SDK6 latest version](https://www.renesas.com/sdk6_latest).
-Install SEGGER’s J-Link tools.
+- Download the latest version of [SDK6 latest version](https://www.renesas.com/sdk6_latest).
+- Install SEGGER’s J-Link tools.
+
 If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
-
-
 
 
 ## Using e² studio with LLVM
 Setup for e² studio
+
 #. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
 
 
@@ -207,8 +213,6 @@ Setup for e² studio
 By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
 
 For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
-
-
 
 ## How to run the example
 

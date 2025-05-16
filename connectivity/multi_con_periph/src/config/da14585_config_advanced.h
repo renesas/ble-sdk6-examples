@@ -5,7 +5,7 @@
  *
  * @brief Advanced compile configuration file.
  *
- * Copyright (C) 2014-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2014-2024 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -214,8 +214,11 @@
 /* Maximum retention memory in bytes. The base address of the retention data is calculated from the selected    */
 /* size.                                                                                                        */
 /****************************************************************************************************************/
-#define CFG_RET_DATA_SIZE    (3072)
-
+#if defined(__clang__)
+#define CFG_RET_DATA_SIZE    (2700)
+#else
+#define CFG_RET_DATA_SIZE    (2200)
+#endif
 /****************************************************************************************************************/
 /* Maximum uninitialized retained data required by the application.                                             */
 /****************************************************************************************************************/
@@ -264,6 +267,11 @@
 #undef CFG_CODE_SIZE_FOR_OTP_COPY_ON
 
 /****************************************************************************************************************/
+/* Uses long range extender (e.g. SKY66111).                                                                    */
+/****************************************************************************************************************/
+#undef CFG_RANGE_EXT
+
+/****************************************************************************************************************/
 /* Temperature range selection.                                                                                 */
 /* - CFG_HIGH_TEMPERATURE:         Device is configured to operate at high temperature range (-40C to +105C).   */
 /* - CFG_AMB_TEMPERATURE:          Device is configured to operate at ambient temperature range (-40C to +40C). */
@@ -279,5 +287,11 @@
 /* NOTE: The XTAL16M adaptive settling algorithm works only with XTAL32K and not with RCX, as the LP clock.     */
 /****************************************************************************************************************/
 #define CFG_XTAL16M_ADAPTIVE_SETTLING
+
+/****************************************************************************************************************/
+/* Enable the wakeup metrics to measure and obtain statistics about the number of delayed wakeups when in       */
+/* high temperature configuration.Also check lld_sleep_compensate_func(void).                                   */
+/****************************************************************************************************************/
+#undef CFG_ENABLE_WAKEUP_METRICS
 
 #endif // _DA14585_CONFIG_ADVANCED_H_

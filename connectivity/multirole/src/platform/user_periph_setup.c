@@ -58,8 +58,8 @@ void GPIO_reservations(void)
 #if defined (CFG_PRINTF_UART2)
     RESERVE_GPIO(UART2_TX, UART2_TX_PORT, UART2_TX_PIN, PID_UART2_TX);
 #endif
-	
-	RESERVE_GPIO(BUTTON, GPIO_BUTTON_PORT, GPIO_BUTTON_PIN, PID_GPIO);
+
+    RESERVE_GPIO(BUTTON, GPIO_BUTTON_PORT, GPIO_BUTTON_PIN, PID_GPIO);
 }
 
 #endif
@@ -80,9 +80,8 @@ void set_pad_functions(void)
     // Configure UART2 TX Pad
     GPIO_ConfigurePin(UART2_TX_PORT, UART2_TX_PIN, OUTPUT, PID_UART2_TX, false);
 #endif
-	
-	GPIO_ConfigurePin(GPIO_BUTTON_PORT, GPIO_BUTTON_PIN, INPUT_PULLUP, PID_GPIO, false);
 
+    GPIO_ConfigurePin(GPIO_BUTTON_PORT, GPIO_BUTTON_PIN, INPUT_PULLUP, PID_GPIO, false);
 }
 
 #if defined (CFG_PRINTF_UART2)

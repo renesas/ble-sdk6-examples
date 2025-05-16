@@ -1,17 +1,24 @@
-# DA14531/585/586 Multirole Example
+# DA1453x/58x Multirole Example
 
 ## Example Description
 
-The example demonstrates the capabilities of the DA14531/585/586 as a Central and a peripheral i.e. scan and advertise role. 
+The example demonstrates the capabilities of the DA1453x/58x as a Central and a peripheral i.e. scan and advertise role. 
 
-**Note**: This example applies for DA14585/586 as well. The DA14531 is capable of handling up to 3 connections and the DA14585/586 can handle up to 8 connections.
+**Note**: This example applies for DA1458x as well. The DA1453x is capable of handling up to 3 connections and the DA1458x can handle up to 8 connections.
 
 The project works as a Central connecting to 2 peripherals, and once connected, it advertises so another central can connect to it.
 
 **Note**: This project assumes that the 2 peripherals will stay connected to the DA14531 central. 
 
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 ## HW setup
- - 3 DA14531 Pro-DK kit with Module/Daugherboard connected to host computer via USB and an android or iPhone.
+ - 3 DA1453x Pro-DK kit with Module/Daugherboard connected to host computer via USB and an android or iPhone.
  - For Central, extra jumpers are required for the UART to see the communication logs. Check the setup shown below for DA14531 and DA14585/586.
  
  <ins>DA14531 daughterboard</ins>
@@ -36,34 +43,31 @@ The project works as a Central connecting to 2 peripherals, and once connected, 
 
 ## SW setup 
 
- - SDK 6 latest version
- - SmartSnippets Toolbox 5.0.14.3038 
+ - [SDK6 latest version](https://www.renesas.com/sdk6_latest)
+ - SmartSnippets Toolbox 5.0.26 
  - a terminal for UART logs (teraterm, termite, etc..)
  
 ## How to run the example
 
-1. For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/dialog-semiconductor/BLE_SDK6_examples).
+1/ For the initial setup of the project that involves linking the SDK to this SW example, please follow this: https://github.com/renesas/ble-sdk6-examples/blob/main/Readme.md.
 
-2. Download Prox_reporter binaries with **different BD addresses and default device name "DLG-PROXR"** to 2 DA14531 devices (as explained [here](http://lpccs-docs.dialog-semiconductor.com/UM-B-083/getting_started/getting_started.html)). 
-You can refer to this [document](http://lpccs-docs.dialog-semiconductor.com/um-b-138/introduction.html) to program the flash with the prox_reporter binaries. Press reset (SW1) on the motherboard and verify with an Android device that they have all started advertising
+    - For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
 
-Note: To configure your device with different BD addresses, follow [here](http://lpccs-docs.dialog-semiconductor.com/DA145xx_Advertising_Tutorial/setting_the_BD_address_and_device_name.html#setting-the-bd-address)
+    - For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
 
-3. Using Keil IDE, open the multirole project and compile the project to build the indexes. You will see errors but ignore it for this step, error will go away after the compilation in step 7.
+    - For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
 
-4. To be able to override the default functions of the SDK the __ EXCLUDE_ROM_APP_TASK __ should be defined in the C/C++ tab in the "options for target" in keil, like so,
+    - For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
 
-	![exclude_rom_tasks.jpg](assets/exclude_rom_tasks.jpg)
 
-5. This example needs changes in the SDK to work. To apply the patch file, execute the following command inside your sdk directory:
-```
-git apply path/to/changes.patch
+2. Download Prox_reporter binaries with **different BD addresses and default device name "DLG-PROXR"** to 2 DA14531 devices.
+You can refer to this [document](https://lpccs-docs.renesas.com/UM-B-083/index.html) to program the flash with the prox_reporter binaries. Press reset (SW1) on the motherboard and verify with an Android device that they have all started advertising
 
-```
-	
-6. Build and compile the project.		
+Note: To configure your device with different BD addresses, follow [Advertising Tutorial](https://lpccs-docs.renesas.com/DA145xx_Advertising_Tutorial/index.html).
 
-7. Download the binary to another DA14531 device (Use flash programmer tool as mentioned in step 1). 
+3. Using Keil IDE, open the multirole project and compile the project to build the indexes. 
+
+4. Download the binary to another DA14531 device (Use flash programmer tool as mentioned in step 1). 
 
 **Note**: Use any android/iPhone BLE scanner to connect/disconnect to/from the DA14531.
 
@@ -107,7 +111,6 @@ For Android, you can use any BLE scanner app to connect and disconnect.
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
 
 
 ## Known Limitations
