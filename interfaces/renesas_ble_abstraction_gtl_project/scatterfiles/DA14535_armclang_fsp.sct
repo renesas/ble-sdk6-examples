@@ -91,19 +91,9 @@
 #define CODE_AREA_OLD_BASE      (0x07fc0000 + 0xC0 + 80)
 
 ; Additional Code offset calculation based on GTL PAD and FW version section size
-#if defined(CFG_FSP_GTL_PADS_SECTION) && defined(CFG_FSP_FW_VERSION_SECTION)
-    #define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE + FSP_FW_VERSION_SIZE)
-    #define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
-    #define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE + FSP_GTL_PADS_SIZE)
-#elif defined(CFG_FSP_GTL_PADS_SECTION)
-    #define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE)
-    #define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
-#elif defined(CFG_FSP_FW_VERSION_SECTION)
-    #define CODE_AREA_OFFSET                   (FSP_FW_VERSION_SIZE)
-    #define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE)
-#else
-    #define CODE_AREA_OFFSET                   (0)
-#endif
+#define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE + FSP_FW_VERSION_SIZE)
+#define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
+#define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE + FSP_GTL_PADS_SIZE)
 
 ; Base address of code (RAM base address + interrupt vector table size + patch table size)
 #define CODE_AREA_BASE          (CODE_AREA_OLD_BASE + CODE_AREA_OFFSET)
@@ -130,21 +120,17 @@ LR_IROM2 0x07fc00c0 80 {                        ; 20 patch function slots
     }
 }
 
-#if defined (CFG_FSP_GTL_PADS_SECTION)
-LR_GTL_PADS_CONFIG FSP_GTL_PADS_SECTION_BASE 32 {
-    ER_GTL_PADS_CONFIG FSP_GTL_PADS_SECTION_BASE 32 {
+LR_GTL_PADS_CONFIG FSP_GTL_PADS_SECTION_BASE FSP_GTL_PADS_SIZE {
+    ER_GTL_PADS_CONFIG FSP_GTL_PADS_SECTION_BASE FSP_GTL_PADS_SIZE {
         *(fsp_gtl_pads)
     }
-}  
-#endif
+}
 
-#if defined (CFG_FSP_FW_VERSION_SECTION)
-LR_FSP_FW_VERSION FSP_FW_VERSION_SECTION_BASE 32 {
-    ER_FSP_FW_VERSION FSP_FW_VERSION_SECTION_BASE 32 {
+LR_FSP_FW_VERSION FSP_FW_VERSION_SECTION_BASE FSP_FW_VERSION_SIZE {
+    ER_FSP_FW_VERSION FSP_FW_VERSION_SECTION_BASE FSP_FW_VERSION_SIZE {
         *(fsp_fw_version)
     }
-}  
-#endif
+}
 
 LR_IROM3 CODE_AREA_BASE CODE_AREA_MAX_SIZE {
 
@@ -152,7 +138,7 @@ LR_IROM3 CODE_AREA_BASE CODE_AREA_MAX_SIZE {
        *(InRoot$$Sections)                      ; All library sections that must be in a
                                                 ; root region, for example, __main.o,
                                                 ; __scatter*.o, __dc*.o, and * Region$$Table
-        startup_DA14535.o (+RO)
+        *(startup_code_DA14xxx)
         *(system_DA14xxx)
         .ANY(+RO)
         .ANY(+RW)
@@ -168,7 +154,10 @@ LR_IROM3 CODE_AREA_BASE CODE_AREA_MAX_SIZE {
 
     ER_ZI +0 {
         .ANY(+ZI)
-        *(STACK)
+    }
+
+    ARM_LIB_STACK +0 {                  ; reserve region for stack
+        *(.bss.stack)
     }
 
     ER_NZI +0 UNINIT {
