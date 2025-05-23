@@ -5,7 +5,7 @@
  *
  * @brief FSP external processor user application source code.
  *
- * Copyright (C) 2012-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2012-2025 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -47,10 +47,17 @@
 #include "user_fsp.h"
 #include "arch_api.h"
 #include "user_config.h"
+#include "user_fsp.h"
 
 #ifdef CFG_FSP_EXT_TASK
 #include "fsp_ext_task.h"
 #endif
+
+#if ((UART_FLOW_CTRL_WAKEUP) && (!BLE_APP_PRESENT))
+#include "ext_wakeup_uart.h"
+#endif 
+
+extern const gtl_pads_config_t * pad_cfg;
 
 /*
  * FUNCTION DEFINITIONS
@@ -59,14 +66,47 @@
 
 /**
  ****************************************************************************************
+ * @brief The handler of the FSP user commands
+ ****************************************************************************************
+ */
+static void custom_user_commands_handler (ke_msg_id_t const msgid,
+                                         void const *param,
+                                         ke_task_id_t const dest_id,
+                                         ke_task_id_t const src_id)
+{
+    switch (msgid)
+    {
+        case USER_CUST_CMD_1:
+            break;
+        case USER_CUST_CMD_2:
+            break;
+        default:
+            break;
+    }
+}
+
+/**
+ ****************************************************************************************
  * @brief User code initialization function.
  ****************************************************************************************
 */
-
 void user_on_init(void)
 {
 #ifdef CFG_FSP_EXT_TASK
-    fsp_ext_task_init(NULL);
+    fsp_ext_task_init(custom_user_commands_handler);
+#endif
+    
+#if ((UART_FLOW_CTRL_WAKEUP) && (!BLE_APP_PRESENT))
+
+    ext_wkup_uart_pins_t wkup_pins = {
+        .cts_uart_port = pad_cfg->cts_pad_port,
+        .cts_uart_pin = pad_cfg->cts_pad_pin,
+        .rts_uart_port = pad_cfg->rts_pad_port,
+        .rts_uart_pin = pad_cfg->rts_pad_pin,
+    };
+    
+    ext_wakeup_uart_init(wkup_pins);
+    ext_wakeup_uart_enable();
 #endif
     
     arch_set_sleep_mode(app_default_sleep_mode);

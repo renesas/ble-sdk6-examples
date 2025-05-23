@@ -5,7 +5,7 @@
  *
  * @brief Advanced compile configuration file.
  *
- * Copyright (C) 2014-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2014-2025 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -53,6 +53,14 @@
 /* Periodic wakeup period if GTL iface is not enabled. Time in msec.                                            */
 /****************************************************************************************************************/
 #define CFG_MAX_SLEEP_DURATION_EXTERNAL_WAKEUP_MS              600000  // 600s
+
+/****************************************************************************************************************/
+/* Enables the bidirectional wake up between DA145xx and an external processor during sleep.                    */
+/* DA145xx will perform an RTS toggle for waking up the external processor and wait for CTS assertion before    */ 
+/* any data transmition. External processor can wake up the DA14531 via performing an RTS toggle and wait for   */
+/* CTS to be asserted.                                                                                          */
+/****************************************************************************************************************/
+#undef CFG_UART_FLOW_CTRL_WAKEUP
 
 /****************************************************************************************************************/
 /* Wakeup from external processor running host application.                                                     */
@@ -255,15 +263,5 @@
 /* it may count events. This leads to WKUP_QUADEC_IRQn pending interrupts.                                      */
 /****************************************************************************************************************/
 #define CFG_DISABLE_QUADEC_ON_START_UP
-
-/****************************************************************************************************************/
-/* Reserves a section before the CODE_BASE that contains the UART Pad and Reset Pad configuration               */
-/****************************************************************************************************************/
-#define CFG_FSP_GTL_PADS_SECTION
-
-/****************************************************************************************************************/
-/* Reserves a section before the CODE_BASE that contains the FW version information of the binary               */
-/****************************************************************************************************************/
-#define CFG_FSP_FW_VERSION_SECTION
 
 #endif // _DA14531_CONFIG_ADVANCED_H_
