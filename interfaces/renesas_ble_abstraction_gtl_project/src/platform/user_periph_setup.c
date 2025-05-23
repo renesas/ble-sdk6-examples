@@ -5,7 +5,7 @@
  *
  * @brief Peripherals setup and initialization.
  *
- * Copyright (C) 2012-2024 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2012-2025 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -126,6 +126,10 @@ void set_pad_functions(void)
 #if defined (__DA14531__)
     // Check if POR can be enabled (check if the port/pin is valid and if there is no conflict with the UART pins)
     if(GPIO_is_valid(pad_cfg->por_pad_port, pad_cfg->por_pad_pin) && !_UART_POR_conflicts()) {
+        uint8_t swd_data_pin = (GetBits16(CLK_AMBA_REG, CLK_AMBA_REG_RSV3_RSV2) == SWD_DATA_AT_P0_5) ? GPIO_PIN_5 : GPIO_PIN_10;
+        if (pad_cfg->por_pad_pin == GPIO_PIN_2 || pad_cfg->por_pad_pin == swd_data_pin)
+            SetBits16(SYS_CTRL_REG, DEBUGGER_ENABLE, 0);
+
         GPIO_Disable_HW_Reset();
         GPIO_ConfigurePin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, INPUT, PID_GPIO, false);
         GPIO_EnablePorPin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, 

@@ -5,7 +5,7 @@
  *
  * @brief FSP external processor user application header file.
  *
- * Copyright (C) 2012-2023 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2012-2025 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -52,11 +52,19 @@
 #include "gapm_task.h"                  // gap functions and messages
 #include "co_error.h"                   // error code definitions
 #include "arch_api.h"                  // error code definitions
+#include "fsp_ext_task.h"
                   
 /*
  * TYPE DEFINITIONS
  ****************************************************************************************
  */
+
+// User defined FSP commands
+typedef enum {
+    USER_CUST_CMD_1     = FSP_MSG_LAST,
+    USER_CUST_CMD_2,
+    USER_CUST_CMD_LAST,    
+} user_cust_cmd_msg_t;
 
 /*
  * DEFINES

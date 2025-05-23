@@ -5,7 +5,7 @@
  *
  * @brief Basic compile configuration file.
  *
- * Copyright (C) 2015-2024 Renesas Electronics Corporation and/or its affiliates.
+ * Copyright (C) 2015-2025 Renesas Electronics Corporation and/or its affiliates.
  * All rights reserved. Confidential Information.
  *
  * This software ("Software") is supplied by Renesas Electronics Corporation and/or its
@@ -69,7 +69,7 @@
 /* should be set to 1 for optimizing memory utilization.                                                        */
 /*      - MAX value for DA14585: 8                                                                              */
 /****************************************************************************************************************/
-#define CFG_MAX_CONNECTIONS     (1)
+#define CFG_MAX_CONNECTIONS     (8)
 
 /****************************************************************************************************************/
 /* Enables development/debug mode. For production mode builds it must be disabled.                              */
