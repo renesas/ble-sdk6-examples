@@ -27,7 +27,7 @@ The Attribute Protocol (ATT), which GATT directly sits on top of in the BLE netw
 In fact, GATT employs ATT to explain how data is sent between two connected devices.
 
 You can find more information about the Attribute Protocol in the BLE network stack at following link :
-[Renesas tutorial](http://lpccs-docs.dialog-semiconductor.com/tutorial-custom-profile-DA145xx/introduction.html )
+[Renesas tutorial](https://lpccs-docs.renesas.com/tutorial-custom-profile-DA145xx/index.html )
 
  **_NOTE:_**  Peripheral or central devices can BOTH act as a server or client, depending on how data is flowing.
 

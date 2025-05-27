@@ -374,19 +374,19 @@ void handle_gattm_add_svc_rsp(ke_msg_id_t msgid,
 						break;
 
 				case ATT_ERR_INVALID_HANDLE:
-						printf("Error creating custom DB, invalid handle\n");
+						arch_printf("Error creating custom DB, invalid handle\n");
 						break;
 
 				case GAP_ERR_INVALID_PARAM:
-						printf("Error creating custom DB, invalid param\n");
+						arch_printf("Error creating custom DB, invalid param\n");
 						break;
 
 				case GATT_ERR_INVALID_PERM:
-						printf("Error creating custom DB, invalid permission\n");
+						arch_printf("Error creating custom DB, invalid permission\n");
 						break;
 
 				default:
-						printf("Error creating custom DB: %04X\n", param->status);
+						arch_printf("Error creating custom DB: %04X\n", param->status);
 						break;
 		}
 }

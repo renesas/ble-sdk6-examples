@@ -8,10 +8,12 @@ This example shows:
 - Demonstrate playing note on an iOS APP that supports MIDI profile, by pressing the buttons on the DA14531-00FXDEVKT-P Development kit.
 
 - Devices naming:
-    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
     - DA1458x is refering to DA14585 and DA14586.
     - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
     - The DA14535 is a DA14531 upgrade.
+    - The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 
 You can watch this intro video:
 
@@ -31,11 +33,11 @@ You can watch this intro video:
 - The DA145xxDEVKT-P PRO-Motherboard with jumper setting for SPI flash programming. The user manuals for the development kits can be found [Here](https://www.renesas.com/us/en/products/wireless-connectivity/bluetooth-low-energy/da14531-00fxdevkt-p-smartbond-tiny-da14531-bluetooth-low-energy-51-system-chip-development-kit-pro) for the DA145xxDEVKT-P PRO-Motherboard.
 
 - For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
-
-- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
-
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits).
 - For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
 - For the DA14585/586 getting started guide you can refer to this [UM-B-049](https://lpccs-docs.renesas.com/da14585_getting_started/index.html).
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
+
 
 The example is running from SRAM. To run the program from flash please visit section 3.1 of the [UM-B-083 SmartSnippets Toolbox User Manual](https://lpccs-docs.renesas.com/UM-B-083/index.html)
 
@@ -114,4 +116,3 @@ If you have any comments or suggestions about this document, you can contact us 
 - [Contact Technical Support](https://www.renesas.com/eu/en/support?nid=1564826&issue_type=technical)
 
 - [Contact a Sales Representative](https://www.renesas.com/eu/en/buy-sample/locations)
-

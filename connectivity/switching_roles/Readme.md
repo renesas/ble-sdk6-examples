@@ -2,7 +2,7 @@
 
 ## Example description
 
-In this example a closer look will be taken at switching BLE roles for the DA14531. The SDK offers an interface for switching between GAP roles. This example looks at the following roles:
+In this example a closer look will be taken at switching BLE roles for the DA1453x. The SDK offers an interface for switching between GAP roles. This example looks at the following roles:
 
 - Broadcaster unidirectional connection (Advertising connectable)
 - Broadcaster connectionless (Advertising nonconnectable)
@@ -11,10 +11,11 @@ In this example a closer look will be taken at switching BLE roles for the DA145
 
 Devices naming:
 
-- DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+- DA1453x is refering to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
 - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. 
 - The DA14531-01 is a ROM variant of the main DA14531-00.
 - The DA14535 is a DA14531 upgrade.
+- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 ## HW and SW configuration
 
@@ -58,8 +59,11 @@ For the initial setup of the project that involves linking the SDK to this SW ex
 
 ![Expand_Select_Device](assets/sw_profile.png)
 
-**Setup the debugger**
-Setup the debugger so the code is loaded on the DA14531 via the PRO-Motherboard and afterwards run the code. More info on how to do this can be found [here](http://lpccs-docs.dialog-semiconductor.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/06_Your_First_DA145x_Applications/Your_First_DA145x_Applications.html#the-blinky-peripheral-example-application).
+- For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits).
+- For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
+
 
 ### Viewing the example results
 
@@ -87,7 +91,7 @@ If configured correctly and the programming is running then each time the DA1453
 ![terminal_result](assets/terminal.png)
 
 **BLE scanner**
-Within the BLE app the DA14531 can be identified by the name **DIALOG-TMPL**. When in nonconnectable mode the **CONNECT** button will not be available. In all other modes it will be. During the pause the DA14531 should not appear in this list as it is not adevertising in this mode.
+Within the BLE app the DA14531 can be identified by the name **switching_roles**. When in nonconnectable mode the **CONNECT** button will not be available. In all other modes it will be. During the pause the DA14531 should not appear in this list as it is not adevertising in this mode.
 ![ble_scanner_result](assets/ble_scanner.png)
 
 **Configuring the code**
