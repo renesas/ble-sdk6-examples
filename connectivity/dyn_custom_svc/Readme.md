@@ -1,4 +1,4 @@
-# DA14531-DA14585/586 Dynamic Custom Service
+# DA14531/DA1458x Dynamic Custom Service
 
 ## Example description
 
@@ -8,27 +8,37 @@ For more information about the GTL, please refer to the [GTL Manual](https://www
 
 The service can be interrogated using a BLE scanning app. 
 
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 ## HW and SW configuration
 
 - **Hardware configuration**
-  - This example runs on the DA14531, DA14585/586 Bluetooth Smart SoC devices.
+  - This example runs on the DA14531, DA1458x Bluetooth Smart SoC devices.
   - The DA1458x / DA14531 Pro Development kit is needed for this example with the jumper configuration depicted below ![Uart_Jumper](assets/uart_connection.svg)
   - DA1453x Pro Development kit is needed for this example with the jumper configuration depicted below ![Uart_Jumper](assets/uart_connection_535.svg)
   - Connect the USB Development kit to the host computer.
 - **Software configuration**
-  - [SDK6 latest version](https://www.dialog-semiconductor.com/da14531_sdk_latest).
-  - **SEGGER’s J-Link** tools should be downloaded and installed.
-  - A smartphone with a BLE scanning app (for example **BLE scanner** on Android or **Lightblue** on IOS).
+  - [SDK6 latest version](https://www.renesas.com/sdk6_latest).
+  - A smartphone with a BLE scanning app.
   - A terminal emulator (for example **Tera Term**)
 
 ## How to run the example
 
 ### Initial Setup
 
-For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/dialog-semiconductor/BLE_SDK6_examples).
+For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/renesas/ble-sdk6-examples/blob/main/Readme.md).
 
-- For the DA14585/586 getting started guide you can refer to this [link](http://lpccs-docs.dialog-semiconductor.com/da14585_getting_started/index.html).
-- For the DA14531 Getting started guide you can refer to this [link](https://www.dialog-semiconductor.com/da14531-getting-started).
+- For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits).
+- For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+- For the DA14585/586 getting started guide you can refer to this [UM-B-049](https://lpccs-docs.renesas.com/da14585_getting_started/index.html).
+- For the DA14533 getting started guide you can refer to this [R19US0026EE0100](https://lpccs-docs.renesas.com/da14533_getting_started_guide/index.html)
+
 
 ### Terminal Setup
 

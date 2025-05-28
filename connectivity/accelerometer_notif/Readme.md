@@ -2,21 +2,29 @@
 
 ## Example description
 
-This example shows how to acquire data from an I2C accelerometer and send the measurements with BLE notifications using a DA14531 or DA14585/586 device. You could use a BLE Scanner app to read out the measurements.
+This example shows how to acquire data from an I2C accelerometer and send the measurements with BLE notifications using a DA14531 or DA14585x device. You could use a BLE Scanner app to read out the measurements.
 
 An I2C sensor is not necessary to run this example.
 Defining NO_SENSOR in ``ADXL345.h`` disables reading of the sensor. 
 The application will send an incrementing number over BLE in this case. 
+
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
+
 
 ## HW and SW configuration
 
 
 ### Hardware configuration
 
-- This example runs on the DA14531 or DA14585/DA14586 Bluetooth Smart SoC devices.
+- This example runs on the DA1453x or DA1458x Bluetooth Smart SoC devices.
 - The DA145xx Pro Development Kit is needed for this example.
 
-Follow the hardware configuration according to your daughterboard, DA14531 or DA14585/DA14586.
+Follow the hardware configuration according to your daughterboard, DA1453x or DA1458x.
 
 * **Hardware configuration for DA14531 devices**
     - Connect the USB1 connector of the DA145xx Pro Development Kit to the host computer.
@@ -35,13 +43,12 @@ Follow the hardware configuration according to your daughterboard, DA14531 or DA
 ### Software configuration
 
 This example requires:
-- SDK v6.0.14 or later
+* [SDK6 latest version](https://www.renesas.com/sdk6_latest).
 - **SEGGER’s J-Link** tools should be downloaded and installed.
-- An application like LightBlue Explorer should be used to act as a BLE Scanner and view the received measurement values. It can be found on [Google Play](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer) or on the [App Store](https://apps.apple.com/gb/app/lightblue-explorer/id557428110).
 
 ## How to run the example
 
-For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/dialog-semiconductor/BLE_SDK6_examples).
+For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](https://github.com/renesas/ble-sdk6-examples/blob/main/Readme.md).
 
 ### Compile and run
 

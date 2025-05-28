@@ -1,4 +1,4 @@
-# ble_pressure_sensor_bmp388
+# BLE pressure sensor bmp388
 
 ## Example description
 
