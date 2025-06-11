@@ -41,15 +41,13 @@
 
 #include "gpio.h"
 #include "uart.h"
-#include "wlan_coex.h"
+
 
 /*
  * DEFINES
  ****************************************************************************************
  */
- 
-#define CFG_COEX
-#define CFG_ONE_WIRE_COEX
+
 
 /****************************************************************************************/
 /* UART1 configuration                                                                  */
@@ -70,16 +68,16 @@
     #define UART1_CTSN_PIN          GPIO_PIN_6
 #else
     #define UART1_TX_PORT           GPIO_PORT_0
-    #define UART1_TX_PIN            GPIO_PIN_6
+    #define UART1_TX_PIN            GPIO_PIN_0
 
     #define UART1_RX_PORT           GPIO_PORT_0
-    #define UART1_RX_PIN            GPIO_PIN_5
+    #define UART1_RX_PIN            GPIO_PIN_1
 
     #define UART1_RTSN_PORT         GPIO_PORT_0
-    #define UART1_RTSN_PIN          GPIO_PIN_7
+    #define UART1_RTSN_PIN          GPIO_PIN_3
 
     #define UART1_CTSN_PORT         GPIO_PORT_0
-    #define UART1_CTSN_PIN          GPIO_PIN_8
+    #define UART1_CTSN_PIN          GPIO_PIN_4
 #endif
 #else
     #define UART1_TX_PORT           GPIO_PORT_0
@@ -132,6 +130,10 @@
 #define UART2_TX_FIFO_LEVEL         UART_TX_FIFO_LEVEL_0
 #define UART2_RX_FIFO_LEVEL         UART_RX_FIFO_LEVEL_0
 
+#if defined (CFG_COEX)
+#define WLAN_VAN_COEX_PORT          GPIO_PORT_0
+#define WLAN_VAN_COEX_PIN           GPIO_PIN_5
+#endif
 
 /***************************************************************************************/
 /* Production debug output configuration                                               */
@@ -209,7 +211,7 @@
 /* DA1453x POR pin configuration                                                        */
 /****************************************************************************************/
 #define POR_RESET_PORT          (GPIO_PORT_0)
-#define POR_RESET_PIN           (GPIO_PIN_0)
+#define POR_RESET_PIN           (GPIO_PIN_2)
 
 /*
  * TYPE DEFINITIONS

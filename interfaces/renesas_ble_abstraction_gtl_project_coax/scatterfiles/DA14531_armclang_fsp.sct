@@ -91,9 +91,19 @@
 #define CODE_AREA_OLD_BASE      (0x07fc0000 + 0xC0 + 80)
 
 ; Additional Code offset calculation based on GTL PAD and FW version section size
-#define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE + FSP_FW_VERSION_SIZE)
-#define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
-#define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE + FSP_GTL_PADS_SIZE)
+#if defined(CFG_FSP_GTL_PADS_SECTION) && defined(CFG_FSP_FW_VERSION_SECTION)
+    #define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE + FSP_FW_VERSION_SIZE)
+    #define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
+    #define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE + FSP_GTL_PADS_SIZE)
+#elif defined(CFG_FSP_GTL_PADS_SECTION)
+    #define CODE_AREA_OFFSET                   (FSP_GTL_PADS_SIZE)
+    #define FSP_GTL_PADS_SECTION_BASE          (CODE_AREA_OLD_BASE)
+#elif defined(CFG_FSP_FW_VERSION_SECTION)
+    #define CODE_AREA_OFFSET                   (FSP_FW_VERSION_SIZE)
+    #define FSP_FW_VERSION_SECTION_BASE        (CODE_AREA_OLD_BASE)
+#else
+    #define CODE_AREA_OFFSET                   (0)
+#endif
 
 ; Base address of code (RAM base address + interrupt vector table size + patch table size)
 #define CODE_AREA_BASE          (CODE_AREA_OLD_BASE + CODE_AREA_OFFSET)

@@ -45,22 +45,9 @@
 #include "syscntl.h"
 #include "fpga_helper.h"
 
-/*************************************************************************************/
-/**************************** Enable Coexistence *************************************/
-/*************************************************************************************/
-
-#include "wlan_coex.h"
 #if defined (CFG_COEX)
-	#define WLAN_VAN_COEX_PORT          GPIO_PORT_0
-	#define WLAN_VAN_COEX_PIN           GPIO_PIN_5
+#include "wlan_coex.h"
 #endif
-
-const wlan_coex_cfg_t wlan_coex_cfg = {
-	.ble_eip_port     = WLAN_VAN_COEX_PORT,
-	.ble_eip_pin      = WLAN_VAN_COEX_PIN,
-	};
-	
-	
 /*
  * GLOBAL VARIABLE DEFINITIONS
  ****************************************************************************************
@@ -85,6 +72,12 @@ __USED gtl_pads_config_u gtl_pads_config __SECTION("fsp_gtl_pads") = {
 };
 
 const gtl_pads_config_t * pad_cfg = &gtl_pads_config.config;
+
+    // Configuration struct for WLAN coexistence
+const wlan_coex_cfg_t wlan_coex_cfg = {
+    .ble_eip_port     = WLAN_VAN_COEX_PORT,
+    .ble_eip_pin      = WLAN_VAN_COEX_PIN,
+};
 
 /*
  * FUNCTION DEFINITIONS
@@ -132,7 +125,7 @@ void GPIO_reservations(void)
 #endif
 
 #if defined (CFG_COEX)
-	RESERVE_GPIO(BLE_EIP, wlan_coex_cfg.ble_eip_port, wlan_coex_cfg.ble_eip_pin, PID_GPIO);
+    RESERVE_GPIO(BLE_EIP, wlan_coex_cfg.ble_eip_port, wlan_coex_cfg.ble_eip_pin, PID_GPIO);
 #endif
 }
 #endif
@@ -150,10 +143,10 @@ void set_pad_functions(void)
         if (pad_cfg->por_pad_pin == GPIO_PIN_2 || pad_cfg->por_pad_pin == swd_data_pin)
             SetBits16(SYS_CTRL_REG, DEBUGGER_ENABLE, 0);
 
-        GPIO_Disable_HW_Reset();
-        GPIO_ConfigurePin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, INPUT, PID_GPIO, false);
-        GPIO_EnablePorPin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, 
-                          pad_cfg->por_pad_polarity ? GPIO_POR_PIN_POLARITY_HIGH:GPIO_POR_PIN_POLARITY_LOW, 1);
+    GPIO_Disable_HW_Reset();
+    GPIO_ConfigurePin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, INPUT, PID_GPIO, false);
+    GPIO_EnablePorPin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, 
+                      pad_cfg->por_pad_polarity ? GPIO_POR_PIN_POLARITY_HIGH:GPIO_POR_PIN_POLARITY_LOW, 1);
     }
 #endif
     
@@ -167,6 +160,10 @@ void set_pad_functions(void)
     GPIO_ConfigurePin(pad_cfg->rts_pad_port, pad_cfg->rts_pad_pin, OUTPUT, PID_UART1_RTSN, false);
     GPIO_ConfigurePin(pad_cfg->cts_pad_port, pad_cfg->cts_pad_pin, INPUT, PID_UART1_CTSN, false);
 
+    SetBits16(SYS_CTRL_REG, DEBUGGER_ENABLE, 0);
+    GPIO_ConfigurePin(GPIO_PORT_0, GPIO_PIN_2, INPUT_PULLDOWN, PID_GPIO, false);
+    GPIO_EnablePorPin(GPIO_PORT_0, GPIO_PIN_2, GPIO_POR_PIN_POLARITY_HIGH, 1);
+    
 #if defined (CFG_PRINTF_UART2)
     GPIO_ConfigurePin(UART2_TX_PORT, UART2_TX_PIN, OUTPUT, PID_UART2_TX, false);
 #endif
@@ -175,12 +172,10 @@ void set_pad_functions(void)
     // External MCU wakeup GPIO
     GPIO_ConfigurePin(EXT_WAKEUP_PORT, EXT_WAKEUP_PIN, OUTPUT, PID_GPIO, false);
 #endif
-		
+    
 #if defined (CFG_COEX)
-	wlan_coex_gpio_cfg();
+    wlan_coex_gpio_cfg();
 #endif
-		
-		
 }
 
 #if defined (CFG_PRINTF_UART2)
