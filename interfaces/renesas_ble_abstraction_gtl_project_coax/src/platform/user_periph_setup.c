@@ -160,10 +160,6 @@ void set_pad_functions(void)
     GPIO_ConfigurePin(pad_cfg->rts_pad_port, pad_cfg->rts_pad_pin, OUTPUT, PID_UART1_RTSN, false);
     GPIO_ConfigurePin(pad_cfg->cts_pad_port, pad_cfg->cts_pad_pin, INPUT, PID_UART1_CTSN, false);
 
-    SetBits16(SYS_CTRL_REG, DEBUGGER_ENABLE, 0);
-    GPIO_ConfigurePin(GPIO_PORT_0, GPIO_PIN_2, INPUT_PULLDOWN, PID_GPIO, false);
-    GPIO_EnablePorPin(GPIO_PORT_0, GPIO_PIN_2, GPIO_POR_PIN_POLARITY_HIGH, 1);
-    
 #if defined (CFG_PRINTF_UART2)
     GPIO_ConfigurePin(UART2_TX_PORT, UART2_TX_PIN, OUTPUT, PID_UART2_TX, false);
 #endif
