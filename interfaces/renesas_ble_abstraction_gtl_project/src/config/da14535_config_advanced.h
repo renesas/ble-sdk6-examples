@@ -60,7 +60,7 @@
 /* any data transmition. External processor can wake up the DA14531 via performing an RTS toggle and wait for   */
 /* CTS to be asserted.                                                                                          */
 /****************************************************************************************************************/
-#undef CFG_UART_FLOW_CTRL_WAKEUP
+#define CFG_UART_FLOW_CTRL_WAKEUP
 
 /****************************************************************************************************************/
 /* Wakeup from external processor running host application.                                                     */
