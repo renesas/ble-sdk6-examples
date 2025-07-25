@@ -53,15 +53,16 @@
 #include "fsp_ext_task.h"
 #endif
 
-#if ((UART_FLOW_CTRL_WAKEUP) && (!BLE_APP_PRESENT))
-#include "ext_wakeup_uart.h"
-#endif
-
 #if (WLAN_COEX_ENABLED)
 #include "wlan_coex.h"
 #endif
 
+#if ((UART_FLOW_CTRL_WAKEUP) && (!BLE_APP_PRESENT))
+#include "ext_wakeup_uart.h"
+#endif 
+
 extern const gtl_pads_config_t * pad_cfg;
+
 /*
  * FUNCTION DEFINITIONS
  ****************************************************************************************
@@ -93,7 +94,6 @@ static void custom_user_commands_handler (ke_msg_id_t const msgid,
  * @brief User code initialization function.
  ****************************************************************************************
 */
-
 void user_on_init(void)
 {
 #ifdef CFG_FSP_EXT_TASK

@@ -36,7 +36,7 @@
 
 #include "da1458x_stack_config.h"
 #include "user_profiles_config.h"
-	
+
 /***************************************************************************************************************/
 /* Integrated or external processor configuration                                                              */
 /*    -defined      Integrated processor mode. Host application runs in DA14585 processor. Host application    */
@@ -69,7 +69,7 @@
 /* should be set to 1 for optimizing memory utilization.                                                        */
 /*      - MAX value for DA14531: 3                                                                              */
 /****************************************************************************************************************/
-#define CFG_MAX_CONNECTIONS     (1)
+#define CFG_MAX_CONNECTIONS     (3)
 
 /****************************************************************************************************************/
 /* Enables development/debug mode. For production mode builds it must be disabled.                              */
@@ -131,6 +131,7 @@
 /* Enables the FSP external processor task                                                                      */
 /****************************************************************************************************************/
 #define CFG_FSP_EXT_TASK
+
 #define CFG_COEX
 
 #define CFG_ONE_WIRE_COEX

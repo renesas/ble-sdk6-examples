@@ -120,6 +120,11 @@
     #define UART2_TX_PIN            GPIO_PIN_4
 #endif
 
+#if defined (CFG_COEX)
+#define WLAN_VAN_COEX_PORT          GPIO_PORT_0
+#define WLAN_VAN_COEX_PIN           GPIO_PIN_5
+#endif
+
 // Define UART2 Settings
 #define UART2_BAUDRATE              UART_BAUDRATE_115200
 #define UART2_DATABITS              UART_DATABITS_8
@@ -130,10 +135,6 @@
 #define UART2_TX_FIFO_LEVEL         UART_TX_FIFO_LEVEL_0
 #define UART2_RX_FIFO_LEVEL         UART_RX_FIFO_LEVEL_0
 
-#if defined (CFG_COEX)
-#define WLAN_VAN_COEX_PORT          GPIO_PORT_0
-#define WLAN_VAN_COEX_PIN           GPIO_PIN_5
-#endif
 
 /***************************************************************************************/
 /* Production debug output configuration                                               */

@@ -48,6 +48,15 @@
 #if defined (CFG_COEX)
 #include "wlan_coex.h"
 #endif
+
+#if defined (CFG_COEX)
+// Configuration struct for WLAN coexistence
+const wlan_coex_cfg_t wlan_coex_cfg = {
+    .ble_eip_port     = WLAN_VAN_COEX_PORT,
+    .ble_eip_pin      = WLAN_VAN_COEX_PIN,
+};
+#endif
+
 /*
  * GLOBAL VARIABLE DEFINITIONS
  ****************************************************************************************
@@ -72,12 +81,6 @@ __USED gtl_pads_config_u gtl_pads_config __SECTION("fsp_gtl_pads") = {
 };
 
 const gtl_pads_config_t * pad_cfg = &gtl_pads_config.config;
-
-    // Configuration struct for WLAN coexistence
-const wlan_coex_cfg_t wlan_coex_cfg = {
-    .ble_eip_port     = WLAN_VAN_COEX_PORT,
-    .ble_eip_pin      = WLAN_VAN_COEX_PIN,
-};
 
 /*
  * FUNCTION DEFINITIONS
@@ -143,10 +146,10 @@ void set_pad_functions(void)
         if (pad_cfg->por_pad_pin == GPIO_PIN_2 || pad_cfg->por_pad_pin == swd_data_pin)
             SetBits16(SYS_CTRL_REG, DEBUGGER_ENABLE, 0);
 
-    GPIO_Disable_HW_Reset();
-    GPIO_ConfigurePin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, INPUT, PID_GPIO, false);
-    GPIO_EnablePorPin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, 
-                      pad_cfg->por_pad_polarity ? GPIO_POR_PIN_POLARITY_HIGH:GPIO_POR_PIN_POLARITY_LOW, 1);
+        GPIO_Disable_HW_Reset();
+        GPIO_ConfigurePin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, INPUT, PID_GPIO, false);
+        GPIO_EnablePorPin(pad_cfg->por_pad_port, pad_cfg->por_pad_pin, 
+                          pad_cfg->por_pad_polarity ? GPIO_POR_PIN_POLARITY_HIGH:GPIO_POR_PIN_POLARITY_LOW, 1);
     }
 #endif
     
