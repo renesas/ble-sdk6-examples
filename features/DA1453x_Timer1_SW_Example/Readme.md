@@ -1,4 +1,4 @@
-# DA14531 Timer1 Software Example
+# DA1453x Timer1 Software Example
 
 ## Example Description
 
@@ -15,7 +15,7 @@ The example can be downloaded from Here.
 
 ## Introduction
 
-The DA14531 product family incorporates three (3) HW timer blocks **Timer0**, **Timer1**, **Timer2**. From the aforementioned timers only Timer1 is capable of running while the device is in sleep mode since its physically located in a separate power domain (PD_TIM). Thus **Timer1** can be used as a wake up source while the device is in extended or deep sleep.  
+The DA1453x product family incorporates three (3) HW timer blocks **Timer0**, **Timer1**, **Timer2**. From the aforementioned timers only Timer1 is capable of running while the device is in sleep mode since its physically located in a separate power domain (PD_TIM). Thus **Timer1** can be used as a wake up source while the device is in extended or deep sleep.  
 
 ![timer1_block_diagram](assets/timer1_block_diagram.png)
 
@@ -38,11 +38,18 @@ It is an 11-bit timer which supports Counting and Input Capturing, as input cloc
 
 3. **Counter Functionality**: In this sw configuration the sw exposes the frequency counter capability that Timer1 implements. The user can apply an external frequency on a DA14531 pin (by default pin P011 is used), the maximum frequency that can be measured from the device depends on the clock selection of the timer1 module. In the example timer 0 is used for generating a frequency for demonstration purposes.
 
+Devices naming:
+
+- DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+- The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+- The DA14535 is a DA14531 upgrade.	
+
+
 ## HW and SW Configuration
 
 ### HW Configuration
 
-- This example runs on the DA14531 Bluetooth Smart SoC device.
+- This example runs on the DA1453x Bluetooth Smart SoC device.
 - The ***DA145xx Pro Development Kit*** is needed for this example.
 - Connect the ***DA145xx Pro Development Kit***  to the host computer via the USB connector. 
 - Use a Logic Analyzer to verify the example (optional)
@@ -63,8 +70,25 @@ It is an 11-bit timer which supports Counting and Input Capturing, as input cloc
 ### SW Configuration
 
 - This example requires:
-  - [SDK6 latest version](https://www.renesas.com/eu/en/document/swo/sdk601811821-da1453x-da145856)
+  - [SDK6 latest version](https://www.renesas.com/sdk6_latest)
   - **SEGGER’s J-Link** tools should be downloaded and installed.
+
+# Using e² studio with LLVM
+
+Setup for e² studio
+
+#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
+
+
+#. Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
+
+#. Run and Debug: Connect your device, set the proper debug configuration in e² studio, and start debugging using J-Link.
+
+
+By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
+
+For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
+
 
 ## How to run the example
 
@@ -277,7 +301,6 @@ Of course the results depend on how much timer the SW2 button is pressed.
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
 
 
 ## Known Limitations

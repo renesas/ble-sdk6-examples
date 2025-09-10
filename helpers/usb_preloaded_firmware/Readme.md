@@ -7,6 +7,7 @@ The main purpose of this software example is to provide the source files contain
     - DA1453x is referring to DA14531-00, DA14531-01, DA14530, DA14533 and DA14535.
     - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
     - The DA14535 is a DA14531 upgrade.
+	- The DA14533 is optimized for automotive and industrial applications at higher temperatures, and it is rated as operating up to 105 ºC and compliant with the AEC-Q100 (Grade 2) standard.
 
 The [UM-B-121 DA14531 getting Started with the USB Development Kit](https://lpccs-docs.renesas.com/UM-B-121-USB-Getting-Started-Guide/index.html) and The [UM-B-183 DA14535 getting Started with the USB Development Kit](https://lpccs-docs.renesas.com/UM-B-183-DA14535-USB-Getting-Started/index.html) show how to run the demo.
 
@@ -53,6 +54,31 @@ You can also refer to the following documentation:
   - A smartphone with a BLE scanning app (for example ***BLE scanner*** on Android or ***Lightblue*** on IOS).
 
   - A BLE Sniffing tool is also useful; though not mandatory .
+
+## Using e² studio with LLVM
+Setup for e² studio
+
+#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
+
+
+#. Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
+
+#. Run and Debug: Connect your device, set the proper debug configuration in e² studio, and start debugging using J-Link.
+
+
+By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
+
+For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
+
+### Update Notice (UART Driver)
+
+If you encounter a **conflicting types for 'itoa'** error when building in e² studio,  
+please update `uart_utils.c` as follows:
+
+- Rename the function `itoa` to `my_itoa`.
+- Update all references in the project from `itoa` to `my_itoa`.
+
+This issue occurs because `e² studio` (GCC toolchain) already has a declaration for `itoa`,  while `Keil` does not. Renaming avoids the naming conflict.
 
 ## How to run the example
 

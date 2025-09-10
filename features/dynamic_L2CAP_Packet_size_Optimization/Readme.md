@@ -1,4 +1,4 @@
-# DA14585/DA14586/DA14531 DLE and L2CAP Packet Optimization
+# DA1458x/DA1453x DLE and L2CAP Packet Optimization
 
 ## Example description
 
@@ -11,18 +11,28 @@ This project is intended to illustrate to the user:
 This functionality can be verified by:
 - Using a BLE handset
 - Reading serial output from the device.
-	
+
+Devices naming:
+
+- DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+- DA1458x is refering to DA14585 and DA14586.
+- The DA14531-00 is the main DA14531 device.
+-  The -00 is just a new naming to introduce the variant DA14531-01. 
+- The DA14531-01 is a ROM variant of the main DA14531-00, not supported by this example.
+- The DA14535 is a DA14531 upgrade.		
 
 ## HW and SW configuration
 This example runs on the BLE Smart SoC (System on Chip) devices:
-- DA14585/DA14586 or DA1453x daughter board + DA14531 or 53x DEVKT-P PRO-Motherboard.
+- DA1458x or DA1453x daughter board + DA14531 or 53x DEVKT-P PRO-Motherboard.
 - DA14585/DA14586 Basic development Kit.
 - DA14531 USB Kit
 
 The user manuals for the development kits can be found:
-- [DA14531 Development Kit Product page](https://www.renesas.com/eu/en/document/mat/um-b-117-da14531-getting-started-pro-development-kit-html-chinese) for the DA14531 or 53x DEVKT-P PRO-Motherboard.
-- [DA14585 Development Kit Basic](https://www.dialog-semiconductor.com/products/da14585-development-kit-basic) for the Basic Development Kit.
-- [DA14531 USB Development Kit Product page](https://www.dialog-semiconductor.com/products/da14531-development-kit-usb) for the DA14531 USB Development Kit.
+
+- For the DA14531 getting started guide you can refer to [UM-B-117](https://lpccs-docs.renesas.com/UM-B-117-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html)
+- For the DA14535 getting started guide you can refer to this [UM-B-165](https://lpccs-docs.renesas.com/DA14535/UM-B-165-DA14531-Getting-Started-With-The-Pro-Development-Kit/index.html#device-family-getting-started-with-the-pro-development-kits)
+- For the DA14531 Module getting started guide you can refer to this [UM-B-139](https://lpccs-docs.renesas.com/UM-B-139-Getting-Started-with-DA14531-TINY-Module/index.html)
+- For the DA14585/586 getting started guide you can refer to this [UM-B-049](https://lpccs-docs.renesas.com/da14585_getting_started/index.html).
 
 * **Hardware configuration DA14585 using the DA145xxDEVKT-P PRO-Motherboard**
 
@@ -43,8 +53,25 @@ The user manuals for the development kits can be found:
 * **Software configuration**
 
 	- This example requires:
-    * SDK6.0.12 or later (Older versions of SDK6 require minimal changes)
+    * [SDK6 latest version](https://www.renesas.com/sdk6_latest)
 	- **SEGGER’s J-Link** tools should be downloaded and installed.
+	- If using e² studio with LLVM instead of Keil, ensure your project settings are adjusted accordingly (instructions below).
+
+## Using e² studio with LLVM
+
+**Setup for e² studio**
+
+Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
+
+Modify Linker Script (.lds): When using e² studio, you will need to modify the .lds linker script to ensure proper memory allocation for DA14531 devices. You can locate the linker script in the project folder and adjust the memory sections if required.
+
+Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
+
+Run and Debug: Connect your device, set the proper debug configuration in e² studio, and start debugging using J-Link.
+
+
+By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
+For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
 
 
 ## How to run the example
@@ -90,6 +117,7 @@ If the warning (shown below) pops up press OK.
 
 ## How it works
 ### General Logic
+
 The example uses a successive approach for optimization throughput.  In the Link Layer, we are limited to two basic buffer sizes depending on
 The support for DLE: 27, 251.  First, we do a peer feature request to see if DLE is supported - If supported, we utilize
 the additional packet space.  From here, we do a connection parameter update, and following the result of this we do an MTU Exchange. 
@@ -100,14 +128,13 @@ our payload then to utilize the the rest of the space.  For non-DLE devices that
 a good enhancement on throughput if otherwised not considered. 
 
 ### Note
+
 This example does not consider a more complex connection parameter scheme for throughput optimization.  This would be an exercise to the user.
 Note that DSPS does include this functionality for reference and provides optimal connection parameters for DLE and non-DLE devices.
 
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
-
 
 ## Known Limitations
 

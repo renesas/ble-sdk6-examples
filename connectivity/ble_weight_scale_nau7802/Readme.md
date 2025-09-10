@@ -36,7 +36,6 @@ Apply the jumper configuration of the image shown below.
 
 Connect a load cell to the click board. Make sure the load cell is mounted according to its manufacturer specification.
 
-
 > **Note**
 > 
 > When using the I2C interface, **the JTAG/Debug interface will be no longer available** because the **P0_2** is shared between the **SWCLK** and the **I2C clock**.
