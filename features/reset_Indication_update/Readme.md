@@ -94,6 +94,9 @@ For the initial setup of the project that involves linking the SDK to this SW ex
 
     ![first_boot_msg](assets/first_boot_msg.png)
 
+    > __Note:__ This will only work if CFG_PRINTF and CFG_SPI_FLASH_ENABLE are defined like described earlier.
+
+
 6. Open a generic BLE mobile application and the ``Reset Detection`` device name should be detected, as shown below.
 
     ![reset_detection_adv](assets/reset_detection_adv.png)
