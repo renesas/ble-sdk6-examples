@@ -66,6 +66,23 @@ To run the program from flash or OTP, please visit Programmer operations chapter
 	- Keil5
 	- SEGGER’s J-Link tools should be downloaded and installed.
 
+# Using e² studio with LLVM
+
+Setup for e² studio
+
+#. Switching to e² studio: Instead of using Keil, you can use e² studio with LLVM as the compiler toolchain. Make sure your project is configured for LLVM by selecting the appropriate toolchain in e² studio.
+
+
+#. Compile and Build: Open your project in e² studio and compile using LLVM. Ensure your environment variables and paths are properly set for the Renesas toolchain.
+
+#. Run and Debug: Connect your device, set the proper debug configuration in e² studio, and start debugging using J-Link.
+
+
+By switching to e² studio and LLVM, you can take advantage of advanced debugging tools and an open-source toolchain, while maintaining full compatibility with Renesas DA145xx devices.
+
+For detailed steps on using e² studio, refer to the Renesas e² studio User Guide available on the [Renesas website](https://lpccs-docs.renesas.com/e2_studio_sdk6_getting_started/index.html).
+
+
 ## How to run the example
 
 ### Setup
@@ -343,7 +360,6 @@ To demonstrate the state-aware hibernation example, the following software modif
 ## Further reading
 
 - [Wireless Connectivity Forum](https://lpccs-docs.renesas.com/lpc_docs_index/DA145xx.html)
-
 
 
 ## Known Limitations

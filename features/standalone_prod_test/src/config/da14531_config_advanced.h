@@ -1,4 +1,4 @@
-1/**
+/**
  ****************************************************************************************
  *
  * @file da14531_config_advanced.h
@@ -166,7 +166,11 @@
 /*     - 8 = GTL (fixed)                                                                                        */
 /*     - 9 = HCI (fixed)                                                                                        */
 /****************************************************************************************************************/
+#if defined (REMOTE_MODE) || defined (BATCH_REMOTE_MODE)
 #define CFG_USE_H4TL                    (0)
+#else
+#define CFG_USE_H4TL                    (1)
+#endif
 
 /****************************************************************************************************************/
 /* Duplicate filter max value for the scan report list. The maximum value shall be 100.                         */
@@ -250,10 +254,29 @@
 /****************************************************************************************************************/
 #define CFG_AMB_TEMPERATURE
 
+
+/****************************************************************************************************************/
+/* Production test configures GPIOs dynamically through host application commands.                              */
+/* Therefore, the pre GPIO allocation is disabled.                                                              */
+/****************************************************************************************************************/
+#define GPIO_DRV_PIN_ALLOC_MON_DISABLED
+
+
+/****************************************************************************************************************/
+/* Define CFG_UART_ONE_WIRE_SUPPORT to enable 1-wire UART support                                               */
+/****************************************************************************************************************/
+#define CFG_UART_ONE_WIRE_SUPPORT
+
 /****************************************************************************************************************/
 /* Disable quadrature decoder on start up. The quadrature decoder is by default enabled on system power up and  */
 /* it may count events. This leads to WKUP_QUADEC_IRQn pending interrupts.                                      */
 /****************************************************************************************************************/
 #define CFG_DISABLE_QUADEC_ON_START_UP
+
+
+/****************************************************************************************************************/
+/* Define CFG_HW_RESET_P00 to enable hw_reset operation in P00                                                  */
+/****************************************************************************************************************/
+#define CFG_HW_RESET_P00
 
 #endif // _DA14531_CONFIG_ADVANCED_H_
