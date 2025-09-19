@@ -44,12 +44,16 @@
 /*    -undefined    External processor mode. Host application runs on an external processor. Communicates with */
 /*                  BLE application through GTL protocol over a signalling iface (UART, SPI etc)               */
 /***************************************************************************************************************/
+#if defined (REMOTE_MODE) || defined (BATCH_REMOTE_MODE)
 #define CFG_APP
+#else
+#undef CFG_APP
+#endif
 
 /****************************************************************************************************************/
 /* Enables the BLE security functionality in TASK_APP. If not defined BLE security related code is compiled out.*/
 /****************************************************************************************************************/
-#define CFG_APP_SECURITY
+#undef CFG_APP_SECURITY
 
 /****************************************************************************************************************/
 /* Enables WatchDog timer.                                                                                      */
@@ -118,5 +122,40 @@
 #undef CFG_UART_DMA_SUPPORT
 #undef CFG_SPI_DMA_SUPPORT
 #undef CFG_I2C_DMA_SUPPORT
+
+
+#if defined (STANDALONE_MODE) || defined (BATCH_REMOTE_MODE)
+
+#if defined (BATCH_REMOTE_MODE)
+    #define STANDALONE_START_IMMEDIATELY
+#endif // BATCH_REMOTE_MODE
+    #define STANDALONE_UNMOD_TX_TEST        // Unmodulated Tx test
+    #define STANDALONE_UNMOD_RX_TEST        // Unmodulated Rx test
+    #define STANDALONE_LE_TX_TEST           // BLE packet Tx test
+    #define STANDALONE_LE_RX_TEST           // BLE packet Rx test
+    #define STANDALONE_CONT_MOD_TX_TEST     // Modulated Tx test
+    #define STANDALONE_GO_TO_SLEEP_TEST     // Goto sleep mode
+
+    #define LOW_CHANNEL  0      // 2402 MHz (BLE channel 37)
+    #define MID_CHANNEL  12     // 2426 MHz (BLE channel 38)
+    #define HIGH_CHANNEL 39     // 2480 MHz (BLE channel 39)
+
+    #if defined(STANDALONE_CONT_MOD_TX_TEST) || defined(STANDALONE_LE_TX_TEST)
+        #define PAYLOAD_TYPE     PAYL_PSEUDO_RAND_9     // Payload types are defined in co_bt.h
+    #endif
+	
+    #ifdef STANDALONE_LE_TX_TEST
+        #define PAYLOAD_LENGTH   37                     // Payload length for STANDALONE_LE_TX_TEST
+    #endif
+	
+#endif // STANDALONE_MODE || BATCH_REMOTE_MODE
+
+/**************************************************************************************************/
+/* Amount of time each test will last */
+/**************************************************************************************************/
+#if defined (BATCH_REMOTE_MODE) || defined (REMOTE_MODE)
+#define END_OF_TEST_TIME		500
+#endif
+
 
 #endif // _DA14585_CONFIG_BASIC_H_

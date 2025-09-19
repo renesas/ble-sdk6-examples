@@ -10,14 +10,14 @@
       <TargetName>DA14585</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x0,0x0) IRAM(0x0,0x0) CPUTYPE("Cortex-M0") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -371,7 +371,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>..\..\..\..\..\..\..\llvm\DA145xx_SDK_test_xml\6.0.22.1401\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
+            <ScatterFile>..\..\..\..\..\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14585_symbols.txt   --symdefs=prod_test_585_symdef.txt --any_placement=best_fit --datacompressor off</Misc>
@@ -388,11 +388,6 @@
               <FileName>system_DA14585_586.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -447,49 +442,6 @@
                       <IncludePath></IncludePath>
                     </VariousControls>
                   </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -550,49 +502,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -601,6 +510,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1907,6 +1933,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2466,14 +2497,14 @@
       <TargetName>DA14585_STANDALONE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x0,0x0) IRAM(0x0,0x0) CPUTYPE("Cortex-M0") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -2827,7 +2858,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>..\..\..\..\..\..\..\llvm\DA145xx_SDK_test_xml\6.0.22.1401\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
+            <ScatterFile>..\..\..\..\..\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14585_symbols.txt   --symdefs=prod_test_585_symdef.txt --any_placement=best_fit --datacompressor off</Misc>
@@ -2844,11 +2875,6 @@
               <FileName>system_DA14585_586.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -2903,49 +2929,6 @@
                       <IncludePath></IncludePath>
                     </VariousControls>
                   </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -3006,49 +2989,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -3057,6 +2997,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -4363,6 +4420,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -4922,14 +4984,14 @@
       <TargetName>DA14585_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x0,0x0) IRAM(0x0,0x0) CPUTYPE("Cortex-M0") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -5283,7 +5345,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>..\..\..\..\..\..\..\llvm\DA145xx_SDK_test_xml\6.0.22.1401\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
+            <ScatterFile>..\..\..\..\..\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14585_symbols.txt   --symdefs=prod_test_585_symdef.txt --any_placement=best_fit --datacompressor off</Misc>
@@ -5300,11 +5362,6 @@
               <FileName>system_DA14585_586.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -5359,49 +5416,6 @@
                       <IncludePath></IncludePath>
                     </VariousControls>
                   </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -5462,49 +5476,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -5513,6 +5484,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -6393,6 +6481,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -6832,14 +6925,14 @@
       <TargetName>Da14585_BATCH_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x0,0x0) IRAM(0x0,0x0) CPUTYPE("Cortex-M0") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -7193,7 +7286,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>..\..\..\..\..\..\..\llvm\DA145xx_SDK_test_xml\6.0.22.1401\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
+            <ScatterFile>..\..\..\..\..\sdk\common_project_files\scatterfiles\DA14585_586_armclang.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14585_symbols.txt   --symdefs=prod_test_585_symdef.txt --any_placement=best_fit --datacompressor off</Misc>
@@ -7210,11 +7303,6 @@
               <FileName>system_DA14585_586.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\system_DA14585_586.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14531.c</FileName>
@@ -7269,49 +7357,6 @@
                       <IncludePath></IncludePath>
                     </VariousControls>
                   </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
                 </FileArmAds>
               </FileOption>
             </File>
@@ -7372,49 +7417,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -7423,6 +7425,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -8303,6 +8422,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -8742,14 +8866,14 @@
       <TargetName>DA14531</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -9174,57 +9298,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -9283,49 +9359,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -9334,6 +9367,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -10181,6 +10331,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -10842,14 +10997,14 @@
       <TargetName>DA14531_STANDALONE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -11274,57 +11429,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -11383,49 +11490,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -11434,6 +11498,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -12281,6 +12462,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -12873,14 +13059,14 @@
       <TargetName>DA14531_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -13305,57 +13491,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -13414,49 +13552,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -13465,6 +13560,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -14312,6 +14524,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -14904,14 +15121,14 @@
       <TargetName>Da14531_BATCH_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -15336,57 +15553,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -15445,49 +15614,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -15496,6 +15622,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -16344,6 +16587,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
             </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -16935,14 +17183,14 @@
       <TargetName>DA14531_01</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -17367,57 +17615,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -17476,49 +17676,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -17527,6 +17684,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -18374,6 +18648,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -19035,14 +19314,14 @@
       <TargetName>DA14531_01_STANDALONE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -19467,57 +19746,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -19576,49 +19807,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -19627,6 +19815,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -20474,6 +20779,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -21135,14 +21445,14 @@
       <TargetName>DA14531_01_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -21567,57 +21877,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -21676,49 +21938,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -21727,6 +21946,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -22505,6 +22841,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -23046,14 +23387,14 @@
       <TargetName>Da14531_01_BATCH_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -23478,57 +23819,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -23587,49 +23880,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -23638,6 +23888,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -24416,6 +24783,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -24957,14 +25329,14 @@
       <TargetName>DA14535</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -25029,7 +25401,7 @@
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>fromelf --bincombined --output=".\out_DA14531\Objects\@L.bin"  "!L"</UserProg1Name>
+            <UserProg1Name>fromelf --bincombined --output=".\out_DA14535\Objects\@L.bin"  "!L"</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -25321,8 +25693,8 @@
             <ScatterFile>..\..\..\..\..\sdk\common_project_files\scatterfiles\DA14535_armclang.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
-            <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14535_symbols.txt --symdefs=prod_test_535_symdef.txt --any_placement=best_fit --datacompressor off
---userlibpath</Misc>
+            <Misc>.\..\..\..\..\..\sdk\common_project_files\misc\da14535_symbols.txt --symdefs=empty_peripheral_template_535_symdef.txt --any_placement=best_fit --datacompressor off
+--userlibpath .\..\..\..\..\..\\sdk\platform\system_library\output\Keil_5\ da14535.lib</Misc>
             <LinkerInputFile></LinkerInputFile>
             <DisabledWarnings></DisabledWarnings>
           </LDads>
@@ -25389,49 +25761,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
@@ -25488,57 +25817,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14535.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14535.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
             </File>
             <File>
               <FileName>hardfault_handler.c</FileName>
@@ -25549,6 +25830,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -26753,6 +27151,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -27414,14 +27817,14 @@
       <TargetName>DA14535_STANDALONE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -27846,49 +28249,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
@@ -27945,57 +28305,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14535.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14535.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
             </File>
             <File>
               <FileName>hardfault_handler.c</FileName>
@@ -28006,6 +28318,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -28904,6 +29333,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -29496,14 +29930,14 @@
       <TargetName>DA14535_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -29928,49 +30362,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
@@ -30027,57 +30418,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14535.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14535.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
             </File>
             <File>
               <FileName>hardfault_handler.c</FileName>
@@ -30088,6 +30431,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -30918,6 +31378,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
             </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -31458,14 +31923,14 @@
       <TargetName>Da14535_BATCH_REMOTE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM0P</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.CMSIS.5.9.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>ARM.Cortex_DFP.1.1.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M0+") CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -31890,57 +32355,9 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14585_586.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14585_586.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>system_DA14531.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\platform\arch\boot\system_DA14531.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_DA14531.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14531.s</FilePath>
             </File>
             <File>
               <FileName>system_DA14535.c</FileName>
@@ -31999,49 +32416,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>startup_DA14535.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\ARM\startup_DA14535.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>hardfault_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\hardfault_handler.c</FilePath>
@@ -32050,6 +32424,123 @@
               <FileName>nmi_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\..\..\..\..\sdk\platform\arch\main\nmi_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14531.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14531.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>startup_DA14535.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14535.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_DA14585_586.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\platform\arch\boot\startup_DA14585_586.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
           </Files>
         </Group>
@@ -32897,6 +33388,11 @@
               <FileName>app_easy_whitelist.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_whitelist.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_easy_storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\sdk\app_modules\src\app_easy\app_easy_storage.c</FilePath>
             </File>
           </Files>
         </Group>

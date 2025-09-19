@@ -18,7 +18,7 @@
  */
 
 #include <stdint.h>
-#include "rdtest_API.h"
+#include "rdtest_api.h"
 
 #if !defined (__DA14531__)
 void rdtest_initialize(uint8_t version)

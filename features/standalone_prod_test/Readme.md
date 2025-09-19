@@ -1,4 +1,4 @@
-# Standalone Production test FW for DA14531-00/01 and DA14585/586
+# Standalone Production test FW for DA1453x and DA1458x
 
 ## Example Description
 
@@ -22,10 +22,16 @@ The project implementing this feature comes with four different targets per devi
 
 One of the features of the Standalone prod_test is that the user can choose to either start executing the commands as soon as the fw is downloaded or as soon as there is a button press. To start command execution immediately the **STANDALONE_START_IMMEDIATELY** should be defined.
 
+- Devices naming:
+    - DA1453x is refering to DA14531-00, DA14531-01, DA14530 and DA14535.
+    - DA1458x is refering to DA14585 and DA14586.
+    - The DA14531-00 is the main DA14531 device. The -00 is just a new naming to introduce the variant DA14531-01. The DA14531-01 is a ROM variant of the main DA14531-00.
+    - The DA14535 is a DA14531 upgrade.
+
 ## HW and SW configuration
 
 * **Hardware configuration**
-	- This example runs on DA1453x and DA14585/586 Bluetooth Smart SoC device.
+	- This example runs on DA1453x and DA1458x Bluetooth Smart SoC device.
   - Any of the following Development Kits can be used : 
     - DA14535 Daughter board + DA1453xDEVKT-P PRO Motherboard
     - DA14531-00/01 Daughter board + DA145xxDEVKT-P PRO Motherboard
@@ -43,8 +49,8 @@ One of the features of the Standalone prod_test is that the user can choose to e
 * **Software configuration**
 
 This example requires:
-* SmartSnippets Toolbox 5.0.14 or later.
-* SDK6.0.22
+* SmartSnippets Toolbox 5.0.26 or later.
+* [SDK6 latest version](https://www.renesas.com/sdk6_latest)
 * **SEGGER’s J-Link** tools should be downloaded and installed.
 
 ### STANDALONE MODE TARGET

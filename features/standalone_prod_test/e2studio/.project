@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hibernation</name>
+	<name>standalone_prod_test</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>com.renesas.cdt.dialogsdk.dialogsdkBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
@@ -27,7 +22,6 @@
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>com.renesas.cdt.dialogsdk.dialogsdkNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -71,6 +65,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>user_custom_profile</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>user_platform</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -98,17 +97,17 @@
 		<link>
 			<name>sdk_app/app_customs.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_custs/app_customs.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_app/app_customs_common.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs_common.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_custs/app_customs_common.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_app/app_customs_task.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/app_modules/src/app_custs/app_customs_task.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_custs/app_customs_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_app/app_default_handlers.c</name>
@@ -128,7 +127,7 @@
 		<link>
 			<name>sdk_app/app_easy_crypto.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_easy/app_easy_crypto.c</locationURI>
+			<location>C:/repos/source_sdk6/sdk/app_modules/src/app_easy/app_easy_crypto.c</location>
 		</link>
 		<link>
 			<name>sdk_app/app_easy_msg_utils.c</name>
@@ -151,9 +150,24 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_easy/app_easy_timer.c</locationURI>
 		</link>
 		<link>
+			<name>sdk_app/app_easy_whitelist.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_easy/app_easy_whitelist.c</locationURI>
+		</link>
+		<link>
 			<name>sdk_app/app_entry_point.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_entry/app_entry_point.c</locationURI>
+		</link>
+		<link>
+			<name>sdk_app/app_findme.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_findme/app_findme.c</locationURI>
+		</link>
+		<link>
+			<name>sdk_app/app_findme_task.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/app_modules/src/app_findme/app_findme_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_app/app_msg_utils.c</name>
@@ -411,14 +425,19 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/syscntl/syscntl.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_driver/timer0.c</name>
+			<name>sdk_driver/systick.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/driver/timer/timer0.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/systick/systick.c</locationURI>
 		</link>
 		<link>
-			<name>sdk_driver/timer1.c</name>
+			<name>sdk_driver/timer0.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/platform/driver/timer/timer1.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/timer/timer0.c</locationURI>
+		</link>
+		<link>
+			<name>sdk_driver/timer2.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/timer/timer2.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_driver/trng.c</name>
@@ -436,6 +455,11 @@
 			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/platform/driver/wkupct_quadec/wkupct_quadec.c</locationURI>
 		</link>
 		<link>
+			<name>sdk_profiles/attm_db_128.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/ble_stack/host/att/attm/attm_db_128.c</locationURI>
+		</link>
+		<link>
 			<name>sdk_profiles/bass.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass.c</locationURI>
@@ -446,14 +470,19 @@
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/bas/bass/src/bass_task.c</locationURI>
 		</link>
 		<link>
+			<name>sdk_profiles/custom_common.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/ble_stack/profiles/custom/custom_common.c</locationURI>
+		</link>
+		<link>
 			<name>sdk_profiles/custs1.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/ble_stack/profiles/custom/custs/src/custs1.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_profiles/custs1_task.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/custom/custs/src/custs1_task.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/sdk/ble_stack/profiles/custom/custs/src/custs1_task.c</locationURI>
 		</link>
 		<link>
 			<name>sdk_profiles/diss.c</name>
@@ -496,9 +525,64 @@
 			<locationURI>PARENT-5-PROJECT_LOC/sdk/ble_stack/profiles/suota/suotar/src/suotar_task.c</locationURI>
 		</link>
 		<link>
-			<name>user_app/user_hibernation.c</name>
+			<name>user_app/Xtal_TRIM.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/user_hibernation.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/src/Xtal_TRIM.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/Xtal_TRIM_platform.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/Xtal_TRIM_platform.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/dialog_commands.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/dialog_commands.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/dialog_prod.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/dialog_prod.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/mainloop_callbacks.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/system/mainloop_callbacks.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/prod_test_rmt.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/prod_test_rmt.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/pulse.s</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/llvm_specific/pulse.s</locationURI>
+		</link>
+		<link>
+			<name>user_app/rdtest_api.c</name>
+			<type>1</type>
+			<location>C:/repos/source_sdk6/projects/sdk6/features/standalone_prod_test/src/rdtest_api.c</location>
+		</link>
+		<link>
+			<name>user_app/rdtest_lowlevel.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/rdtest_lowlevel.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/rdtest_support.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/rdtest_support.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/user_commands.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/user_commands.c</locationURI>
+		</link>
+		<link>
+			<name>user_app/xtal_cal_58x.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src/xtal_cal_58x.c</locationURI>
 		</link>
 		<link>
 			<name>user_config/da1458x_config_advanced.h</name>
@@ -521,11 +605,6 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/config/user_config.h</locationURI>
 		</link>
 		<link>
-			<name>user_config/user_hibernation.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/src/user_hibernation.c</locationURI>
-		</link>
-		<link>
 			<name>user_config/user_modules_config.h</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/config/user_modules_config.h</locationURI>
@@ -539,6 +618,16 @@
 			<name>user_config/user_profiles_config.h</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/config/user_profiles_config.h</locationURI>
+		</link>
+		<link>
+			<name>user_custom_profile/user_custs1_def.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/custom_profile/user_custs1_def.c</locationURI>
+		</link>
+		<link>
+			<name>user_custom_profile/user_custs_config.c</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/src/custom_profile/user_custs_config.c</locationURI>
 		</link>
 		<link>
 			<name>user_platform/user_periph_setup.c</name>
