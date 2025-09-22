@@ -1,3 +1,16 @@
+---
+name: button_Wakeup
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - notification 
+    - BLE 
+    - Button presses
+description: |
+    This example shows how to configure a DA14531 or DA1458x device to send
+    notifications to a BLE central by button presses
+---
+
 # DA1453x and DA1458x BLE Notifications on Button Press with Wake-up Controller
 
 ## Example description

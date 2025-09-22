@@ -1,4 +1,17 @@
-﻿# DA14585/DA14586 and DA1453x Multiple button press wake up callback
+﻿---
+name: wakeup-button
+module: interfaces
+boards: [da14531_pro, da14585_pro, da14585_basic]
+keywords:
+    - SW2
+    - SW3 button 
+    - wakeup up
+description: |
+    This example shows how to wake up using two possible sources, button SW2 or
+    button SW3. it shows how to detect the source, button SW2 or button SW3.
+---
+
+# DA14585/DA14586 and DA1453x Multiple button press wake up callback
 
 ## Example description
 

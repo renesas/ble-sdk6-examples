@@ -1,4 +1,16 @@
-﻿# DA14585/DA14586/DA14531 Peripheral - GPIO button interrupt with edge detection
+﻿---
+name: simple_button
+module: interfaces
+boards: [da14531_pro, da14585_pro, da14585_basic]
+keywords:
+    - Button 
+    - Press 
+    - UART
+description: |
+    This example shows How to configure a button for short press and long press
+---
+
+# DA14585/DA14586/DA14531 Peripheral - GPIO button interrupt with edge detection
 
 ## Example description
 

@@ -1,3 +1,14 @@
+---
+name: Weight Scale
+module: connectivity
+boards: [da14531_pro]
+keywords:
+    - Weight Scale
+description: |
+    The goal of this example is to show an implementation of a generic BLE
+    profile by showing a weight scale implementation
+---
+
 # BLE weight scale using NAU7802
 
 ## Example description

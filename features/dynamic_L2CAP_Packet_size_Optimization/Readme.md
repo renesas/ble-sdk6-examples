@@ -1,3 +1,17 @@
+---
+name: L2CAP
+module: features
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - L2CAP
+    - DLE
+    - throughput
+description: |
+    This project is intended to illustrate to the user how to do a peer feature
+    request for determining peer DLE capability and how to request DLE and
+    utilize larger packets to enhance throughput
+---
+
 # DA1458x/DA1453x DLE and L2CAP Packet Optimization
 
 ## Example description

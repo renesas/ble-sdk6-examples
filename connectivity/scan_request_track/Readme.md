@@ -1,3 +1,16 @@
+---
+name: scan_request_track
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - scan
+    - central 
+    - track
+description: |
+    This example demonstrates how a peripheral device can track if it is
+    scanned and which central device performs the scanning procedure
+---
+
 # DA1453x/DA1458x Scan Request Track
 
 ## Example description

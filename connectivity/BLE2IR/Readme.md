@@ -1,3 +1,14 @@
+---
+name: BLE2IR
+module: connectivity
+boards: [da14585_basic]
+keywords:
+    - Remote Control Unit
+description: |
+    This example provides an implementation of a Simple RCU using a custom BLE
+    profile
+---
+
 # DA14585 Simple Remote Control Unit peripheral example
 
 ## Example description

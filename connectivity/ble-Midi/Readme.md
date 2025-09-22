@@ -1,3 +1,14 @@
+---
+name: ble-Midi
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - MIDI 
+    - BLE
+description: |
+    This example shows how to create MIDI service on DA145xx BLE device
+---
+
 # ble-Midi
 
 ## Example description

@@ -1,3 +1,19 @@
+---
+name: svc_data_beacon
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - Beacon
+    - Non
+    - Connectable Advertising 
+    - UUID
+description: |
+    The main purpose of this software example is to demonstrate creating a
+    Non-Connectable Advertising application example that includes service data.
+    Specifically, this example illustrates the idea of including Service Data
+    from a 16-bit UUID as defined by the Bluetooth SIG
+---
+
 # DA1453x and DA1458x Service Data Beacon
 
 ## Example description

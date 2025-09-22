@@ -1,3 +1,17 @@
+---
+name: External processor Renesas
+module: interfaces
+boards: [da14531_pro]
+keywords:
+    - EK
+    - RA2E1
+    - DA14531 RAM 
+    - External MCU
+description: |
+    The goal of this example is to show how to load a program into the RAM of
+    the DA14531 via a Renesas microcontroller EK-RA2E1.
+---
+
 # Booting the DA14531 through a R7FA2E1 from RENESAS (EK-RA2E1)
 
 ## Example description

@@ -1,3 +1,15 @@
+---
+name: wakeup_ext_timer
+module: interfaces
+boards: [da14531_pro]
+keywords:
+    - Eddystone beacon
+    - TPL5010EVM 
+    - Wakeup
+description: |
+    This example configures a DA14531 device to be used as an Eddystone beacon.
+---
+
 # BLE Eddystone beacon with hibernation or deep sleep mode
 
 ## Example description

@@ -1,3 +1,16 @@
+---
+name: active_scanner
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - scanning mode
+    - advertising data
+    - UART
+description: |
+    This example shows how to setup the DA145xx device in active scanning mode,
+    On advertising data report, the data is formatted and pushed on the UART
+---
+
 # DA1453x and DA14585/586 Active scanner
 
 ## Example description

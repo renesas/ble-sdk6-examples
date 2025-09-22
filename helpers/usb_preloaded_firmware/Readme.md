@@ -1,3 +1,18 @@
+---
+name: usb_preloaded
+module: helpers
+boards: [da14531_usb]
+keywords:
+    - USB
+    - DA14531
+    - OTP unique random address 
+    - BD address 
+    - UART print
+description: |
+    The main purpose of this software example is to provide the source files
+    containing the firmware for the preloaded binary in the DA14531 USB kit.
+---
+
 # DA1453x USB Preloaded Firmware
 
 ## Example description

@@ -1,3 +1,15 @@
+---
+name: HID-Gamepad
+module: interfaces
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - HID gamepad 
+    - BLE HOGPD profile.
+description: |
+    A DA14585/6 HID gamepad demo project. Used to demonstrate the usage of HID
+    features over BLE with HOGPD profile.
+---
+
 # HID Gamepad Demo
 
 ## Example Overview

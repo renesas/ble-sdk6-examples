@@ -1,3 +1,16 @@
+---
+name: multi_con_periph
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - Central 
+    - peripheral
+    - connection
+description: |
+    This example demonstrates how a single peripheral can be connected to more
+    than one central.
+---
+
 # Multi-peripheral Example
 
 ## Example description

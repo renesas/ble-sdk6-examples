@@ -1,3 +1,15 @@
+---
+name: MCube-Accel
+module: interfaces
+boards: [da14585_basic]
+keywords:
+    - I2C
+    - MC36xx (MC3672/35) accelerometers.
+description: |
+    Sample software application to interface Dialog DA14585/586 BLE SoC's with
+    mCube MC36xx (MC3672/35) accelerometers.
+---
+
 # DA14585/586 interface with mCube Accelerometer over I2C
 
 ## Example description

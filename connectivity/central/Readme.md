@@ -1,3 +1,16 @@
+---
+name: central
+module: connectivity
+boards: [da14531_pro, da14585_pro, da14531_usb]
+keywords:
+    - BLE
+    - Central
+description: |
+    This project is intended to illustrate to the user How to scan for peer
+    devices and how to parse advertisement data during the scan process + BLE
+    connection
+---
+
 # DA1453x and DA1458x Central Implementation
 
 ## Example description

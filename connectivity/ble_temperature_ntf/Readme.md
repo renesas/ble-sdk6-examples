@@ -1,3 +1,16 @@
+---
+name: ble_temperature
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - MCP9808
+    - Thermo 8 click board 
+    - I2C
+description: |
+    This is Simple example showing how to interface the DA14585/586 and DA14531
+    with the Thermo 8 click board™
+---
+
 # ble_temperature_ntf
 
 ## Example description

@@ -1,3 +1,16 @@
+---
+name: reset_Indication
+module: features
+boards: [da14531_pro, da14585_pro, da14531_usb]
+keywords:
+    - Reset 
+    - source
+description: |
+    The current SW example demonstrates how to issue and identify the different
+    kinds of reset on the DA14531 and DA14585/586 devices as well as
+    identifying if the device run into a Hardfault or an NMI interrupt.
+---
+
 # Reset type identification on DA14585/586, DA14531
 
 ## Example Description

@@ -1,3 +1,17 @@
+---
+name: multirole
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - Central
+    - peripheral 
+    - scan
+    - advertise roles
+description: |
+    The example demonstrates the capabilities of the DA14531/58x as a
+    Central and a peripheral i.e. scan and advertise role
+---
+
 # DA1453x/58x Multirole Example
 
 ## Example Description

@@ -1,3 +1,14 @@
+---
+name: segger_rtt
+module: interfaces
+boards: [da14531_pro, da14585_pro, da14531_usb]
+keywords:
+    - Segger RTT
+description: |
+    This example illustrates to the user, how to use SEGGER RTT in conjunction
+    with the DA145xx family.
+---
+
 # DA14585/DA14586/DA14531 Segger RTT example
 
 ## Example description

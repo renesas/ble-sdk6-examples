@@ -1,3 +1,15 @@
+---
+name: Timer1
+module: features
+boards: [da14531_pro]
+keywords:
+    - Timer 1 
+    - DA14531
+description: |
+    This software example demonstrates the usage of the TIMER1 hardware block.
+    The SW example exposes the basic functions that TIMER1 offers
+---
+
 # DA1453x Timer1 Software Example
 
 ## Example Description

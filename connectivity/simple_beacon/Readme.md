@@ -1,3 +1,16 @@
+---
+name: simple_beacon
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - Beacon
+    - Non
+    - Connectable Advertising
+description: |
+    The main purpose of this Software Εxample is to demonstrate creating a
+    Non-Connectable Advertising application example
+---
+
 # DA1453x and DA1458x Simple Beacon Example
 
 ## Example description
