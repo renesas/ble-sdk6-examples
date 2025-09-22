@@ -1,3 +1,16 @@
+---
+name: accel-Sensor
+module: interfaces
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - I2C accelerometer 
+    - BLE notifications
+description: |
+    This example shows how to acquire data from an I2C accelerometer and send
+    the measurements with BLE notifications using a DA14531 or DA14585/586
+    device
+---
+
 # Reading an I2C accelerometer and sending BLE notifications
 
 ## Example description

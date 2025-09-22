@@ -1,3 +1,15 @@
+---
+name: social-distancing
+module: features
+boards: [da14531_pro, da14585_pro, da14531_usb]
+keywords:
+    - DA14531 
+    - social distancing (SDT)
+description: |
+    This example configures a DA14531 device to be used for social distancing
+    purposes
+---
+
 # Social Distancing Application
 
 ## Example Description

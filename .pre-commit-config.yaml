@@ -1,0 +1,7 @@
+repos:
+  - repo: https://github.com/renesas/auto-example-table
+    rev: v0.3.2
+    hooks:
+      - id: auto-example-table
+        args:
+          - Readme.md

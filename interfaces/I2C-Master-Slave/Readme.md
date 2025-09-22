@@ -1,3 +1,17 @@
+---
+name: I2C-Master-Slave
+module: interfaces
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - I2C 
+    - Master-slave
+description: |
+    This example describes how to perform I2C data buffer
+    transmission/reception between two boards in asynchronous mode
+    (non-blocking communication). The project is split in two parts: the Master
+    Board and the Slave Board.
+---
+
 # DA145xx I2C Master Slave example
 
 ## Example description

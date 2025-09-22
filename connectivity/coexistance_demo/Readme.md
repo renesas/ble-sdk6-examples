@@ -1,3 +1,15 @@
+---
+name: Coexistence
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - WiFi coexistence 
+    - BLE
+description: |
+    The example provides guidelines on how the WiFi coexistence feature can be
+    enabled on the SDK
+---
+
 # Coexistance example
 
 ## Example Description

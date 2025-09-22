@@ -1,8 +1,20 @@
+---
+name: pressure_sensor
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - BLE
+    - PRESSURE 5 CLICK Board™
+description: |
+    This is Simple example showing how to interface the DA1458x and DA14531
+    with the PRESSURE 5 CLICK Board™
+---
+
 # BLE pressure sensor bmp388
 
 ## Example description
 
-Simple example showing how to interface the DA14585/586 and DA14531 with the [PRESSURE 5 CLICK Board™](https://www.mikroe.com/pressure-5-click) which features the Bosch BMP388 Digital Pressure Sensor via I2C or SPI. 
+Simple example showing how to interface the DA1458x and DA14531 with the [PRESSURE 5 CLICK Board™](https://www.mikroe.com/pressure-5-click) which features the Bosch BMP388 Digital Pressure Sensor via I2C or SPI. 
 When connected to a BLE central this example allows the measured pressure and temperature values to be read. 
 
 ## HW and SW configuration

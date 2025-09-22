@@ -1,3 +1,15 @@
+---
+name: hibernation
+module: connectivity
+boards: [da14531_pro]
+keywords:
+    - Hibernation
+    - State aware hibernation
+description: |
+    This example demonstrates the Hibernation and the State aware hibernation
+    features on the DA14531
+---
+
 # Hibernation and State aware hibernation
 
 ## Example description

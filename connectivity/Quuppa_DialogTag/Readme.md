@@ -1,3 +1,16 @@
+---
+name: Quuppa Tag Emu
+module: connectivity
+boards: [da14531_pro]
+keywords:
+    - Quuppa Intelligent Locating System™
+    - real-time location
+    - BLE
+    - Tag
+description: |
+    this is the QUUPPA Tag Emu Demo on the DA14531
+---
+
 
 # DA14531 Quuppa Tag Emu example
 

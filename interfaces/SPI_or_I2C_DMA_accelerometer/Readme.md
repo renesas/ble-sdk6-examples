@@ -1,4 +1,16 @@
-﻿# SPI or I2C reading with DMA
+﻿---
+name: SPI-_I2C_DMA
+module: interfaces
+boards: [da14531_pro]
+keywords:
+    - SPI 
+    - I2C to interface with the LIS2DH acceleromete
+description: |
+    This example demonstrates how to use SPI or I2C to interface with the
+    LIS2DH acceleromete
+---
+
+# SPI or I2C reading with DMA
 
 ## Example description
 

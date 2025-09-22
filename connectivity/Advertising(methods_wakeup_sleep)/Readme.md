@@ -1,3 +1,17 @@
+---
+name: advertising
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - button 
+    - advertising 
+    - Sleep
+    - Wakeup up
+description: |
+    This example shows how to Use a button to switch between advertising
+    methods, Go for sleep and wakeup , Timer callback is used
+---
+
 # DA1453x and DA1458x - Changing advertising methods using GPIO button interrupt or timer callbacks
 
 ## Example description

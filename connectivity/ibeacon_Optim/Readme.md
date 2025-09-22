@@ -1,3 +1,15 @@
+---
+name: ibeacon_Optim
+module: connectivity
+boards: [da14531_pro]
+keywords:
+    - ibeacon 
+    - power optimization
+description: |
+    The example demonstrates an optimized software implementation for ibeacon
+    on the DA14531
+---
+
 # DA1453x Optimised Ibeacon example
 
 ## Example description

@@ -1,3 +1,15 @@
+---
+name: burst_adv
+module: connectivity
+boards: [da14531_pro, da14585_pro]
+keywords:
+    - Burst advertising 
+    - UART
+description: |
+    This is a simple example showing how to implement 'burst' advertising on
+    the DA14531 and DA1458x devices
+---
+
 # DA1453x and DA1458x Burst Advertising with Bluetooth LE
 
 ## Example description

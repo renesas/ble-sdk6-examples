@@ -1,3 +1,16 @@
+---
+name: central_Security
+module: connectivity
+boards: [da14531_pro, da14585_basic]
+keywords:
+    - pairing 
+    - encryption 
+    - bonding
+description: |
+    The main example purpose is to demonstrate the basic pairing, encryption
+    and bonding process on central side
+---
+
 # BLE Central Security Demo Project
 
 ## Example description

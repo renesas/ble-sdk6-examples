@@ -1,3 +1,16 @@
+---
+name: SPI-Master-Slave
+module: interfaces
+boards: [da14531_pro]
+keywords:
+    - SPI 
+    - Master-slave
+description: |
+    This example describes how to perform SPI data buffer
+    transmission/reception between two DA14531 devices via DMA. The project is
+    split in two parts: the Master Board and the Slave Board.
+---
+
 # DA14531 SPI Master Slave example
 
 ## Example description

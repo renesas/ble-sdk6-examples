@@ -1,3 +1,15 @@
+---
+name: ibeacon
+module: connectivity
+boards: [da14531_pro, da14585_pro, da14531_usb]
+keywords:
+    - iBeacon
+    - payload parameters 
+    - advertising interval, UUID
+description: |
+    This is an iBeacon implementation for the DA14531, DA1458x
+---
+
 # DA1453x and DA1458x ibeacon
 
 ## Example description

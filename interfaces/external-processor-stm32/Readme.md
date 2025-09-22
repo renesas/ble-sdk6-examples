@@ -1,3 +1,16 @@
+---
+name: STM32-external-processor
+module: interfaces
+boards: [da14531_pro]
+keywords:
+    - STM32
+    - DA14531 RAM 
+    - External MCU
+description: |
+    The goal of this example is to show how to load a program into the RAM of
+    the DA14531 via a STM32 microcontroller
+---
+
 # Booting the DA14531 with Codeless through a STM32
 
 
