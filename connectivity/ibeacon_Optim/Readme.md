@@ -1,7 +1,6 @@
 ---
 name: ibeacon_Optim
-module: connectivity
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - ibeacon 
     - power optimization

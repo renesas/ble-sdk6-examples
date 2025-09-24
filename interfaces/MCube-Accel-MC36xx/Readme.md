@@ -1,7 +1,6 @@
 ---
 name: MCube-Accel
-module: interfaces
-boards: [da14585_basic]
+boards: [da14585]
 keywords:
     - I2C
     - MC36xx (MC3672/35) accelerometers.

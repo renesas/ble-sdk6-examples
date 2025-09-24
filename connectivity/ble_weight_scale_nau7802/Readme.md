@@ -1,7 +1,6 @@
 ---
 name: Weight Scale
-module: connectivity
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - Weight Scale
 description: |

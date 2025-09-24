@@ -1,7 +1,7 @@
 ---
 name: social-distancing
 module: features
-boards: [da14531_pro, da14585_pro, da14531_usb]
+boards: [da14531, da14585]
 keywords:
     - DA14531 
     - social distancing (SDT)

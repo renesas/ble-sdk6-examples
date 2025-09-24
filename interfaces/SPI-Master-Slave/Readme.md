@@ -1,7 +1,6 @@
 ---
 name: SPI-Master-Slave
-module: interfaces
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - SPI 
     - Master-slave

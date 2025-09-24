@@ -1,7 +1,6 @@
 ---
 name: HID-Gamepad
-module: interfaces
-boards: [da14531_pro, da14585_pro]
+boards: [da14531, da14585]
 keywords:
     - HID gamepad 
     - BLE HOGPD profile.

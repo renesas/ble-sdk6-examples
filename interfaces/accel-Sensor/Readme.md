@@ -1,7 +1,6 @@
 ---
 name: accel-Sensor
-module: interfaces
-boards: [da14531_pro, da14585_pro]
+boards: [da14531, da14585]
 keywords:
     - I2C accelerometer 
     - BLE notifications

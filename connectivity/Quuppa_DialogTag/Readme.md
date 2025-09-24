@@ -1,7 +1,6 @@
 ---
 name: Quuppa Tag Emu
-module: connectivity
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - Quuppa Intelligent Locating System™
     - real-time location

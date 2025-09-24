@@ -1,7 +1,6 @@
 ---
 name: pressure_sensor
-module: connectivity
-boards: [da14531_pro, da14585_pro]
+boards: [da14531, da14585]
 keywords:
     - BLE
     - PRESSURE 5 CLICK Board™

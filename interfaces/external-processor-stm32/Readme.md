@@ -1,7 +1,6 @@
 ---
 name: STM32-external-processor
-module: interfaces
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - STM32
     - DA14531 RAM 
