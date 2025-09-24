@@ -1,7 +1,6 @@
 ---
 name: ble_temperature
-module: connectivity
-boards: [da14531_pro, da14585_pro]
+boards: [da14531, da14585]
 keywords:
     - MCP9808
     - Thermo 8 click board 

@@ -1,7 +1,6 @@
 ---
 name: ble-Midi
-module: connectivity
-boards: [da14531_pro, da14585_pro]
+boards: [da14531, da14585]
 keywords:
     - MIDI 
     - BLE

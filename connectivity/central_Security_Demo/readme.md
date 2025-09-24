@@ -1,7 +1,6 @@
 ---
 name: central_Security
-module: connectivity
-boards: [da14531_pro, da14585_basic]
+boards: [da14531, da14585]
 keywords:
     - pairing 
     - encryption 

@@ -1,7 +1,6 @@
 ---
 name: hibernation
-module: connectivity
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - Hibernation
     - State aware hibernation

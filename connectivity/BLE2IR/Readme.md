@@ -1,7 +1,6 @@
 ---
 name: BLE2IR
-module: connectivity
-boards: [da14585_basic]
+boards: [da14585]
 keywords:
     - Remote Control Unit
 description: |

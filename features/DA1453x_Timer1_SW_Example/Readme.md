@@ -1,7 +1,6 @@
 ---
 name: Timer1
-module: features
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - Timer 1 
     - DA14531

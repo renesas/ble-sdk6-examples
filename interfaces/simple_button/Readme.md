@@ -1,7 +1,6 @@
 ﻿---
 name: simple_button
-module: interfaces
-boards: [da14531_pro, da14585_pro, da14585_basic]
+boards: [da14531, da14585]
 keywords:
     - Button 
     - Press 

@@ -1,7 +1,6 @@
 ---
 name: wakeup_ext_timer
-module: interfaces
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - Eddystone beacon
     - TPL5010EVM 

@@ -1,7 +1,6 @@
 ---
 name: usb_preloaded
-module: helpers
-boards: [da14531_usb]
+boards: [da14531]
 keywords:
     - USB
     - DA14531

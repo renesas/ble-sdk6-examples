@@ -1,7 +1,6 @@
 ---
 name: segger_rtt
-module: interfaces
-boards: [da14531_pro, da14585_pro, da14531_usb]
+boards: [da14531, da14585]
 keywords:
     - Segger RTT
 description: |

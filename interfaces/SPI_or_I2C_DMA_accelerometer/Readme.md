@@ -1,7 +1,6 @@
 ﻿---
 name: SPI-_I2C_DMA
-module: interfaces
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - SPI 
     - I2C to interface with the LIS2DH acceleromete

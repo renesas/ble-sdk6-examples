@@ -1,7 +1,6 @@
 ---
 name: External processor Renesas
-module: interfaces
-boards: [da14531_pro]
+boards: [da14531]
 keywords:
     - EK
     - RA2E1
