@@ -91,7 +91,11 @@ void user_send_temperature_ntf(void)
 	if (temperature != previous_temperature){
 	
 		previous_temperature = temperature;
-        length = snprintf(temperature_ntf_string, TEMPERATURE_DATA, SNPRINT_FORMAT, temperature);
+    int temp_int  = (int)temperature;
+		int temp_frac = (int)((temperature - temp_int) * 10000);
+
+		length = snprintf(temperature_ntf_string,TEMPERATURE_DATA, "%d.%04d" ,temp_int, temp_frac);
+		
 		//Allocate a new message
 		struct custs1_val_ntf_ind_req* req = KE_MSG_ALLOC_DYN(CUSTS1_VAL_NTF_REQ,
 																prf_get_task_from_id(TASK_ID_CUSTS1),
