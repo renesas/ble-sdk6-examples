@@ -4,10 +4,8 @@ boards: [da14531, da14585]
 keywords:
     - empty peripheral template
     - sample project
-
 description: |
-This is SDK6 e² studio sample project known as empty_peripheral_template. 
-
+    This is SDK6 e² studio sample project known as empty_peripheral_template.
 ---
 
 # empty_peripheral_template
